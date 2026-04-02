@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="36.5dp">
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:id="@+id/local_total_play_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/playlists" android:layout_centerVertical="true" app:typeface="normal"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_b6afb0" android:id="@+id/local_total_play_list_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="(0)" android:layout_toRightOf="@+id/local_total_play_list" android:layout_centerVertical="true" app:typeface="normal"/>
+                <ImageView android:id="@+id/create_play_list_iv" android:background="?attr/selectableItemBackgroundBorderless" android:padding="5dp" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginRight="14dp" android:src="@drawable/icon_create" android:layout_alignParentRight="true"/>
+                <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView android:id="@+id/playlist_recycle_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout>
+</LinearLayout>

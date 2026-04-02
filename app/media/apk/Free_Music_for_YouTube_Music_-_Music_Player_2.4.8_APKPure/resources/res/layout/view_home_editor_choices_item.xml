@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="155dp" android:layout_height="87dp" android:layout_marginRight="10dp" android:layout_marginBottom="18dp">
+    <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/cover_iv" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" app:riv_corner_radius="6dp"/>
+    <com.makeramen.roundedimageview.RoundedImageView android:background="@drawable/edit_shape" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <TextView android:textSize="32sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/text_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="star" android:lines="1" android:layout_centerInParent="true"/>
+</RelativeLayout>

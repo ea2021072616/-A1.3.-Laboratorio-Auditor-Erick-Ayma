@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/slide_menu_view" android:background="@color/color_f7f7f7" android:fitsSystemWindows="false" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:id="@+id/user_panel" android:layout_width="wrap_content" android:layout_height="142dp">
+            <ImageView android:layout_width="match_parent" android:layout_height="142dp" android:src="@mipmap/icon_slide_bg" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_centerHorizontal="true">
+                <RelativeLayout android:layout_width="54dp" android:layout_height="54dp">
+                    <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/user_avatar" android:background="@drawable/user_avatar_def" android:layout_width="54dp" android:layout_height="54dp" app:riv_corner_radius="27dp"/>
+                    <ImageView android:id="@+id/iv_vip_mark_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/vip_mark_icon" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/white" android:id="@+id/user_nick" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="" app:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginBottom="15dp" android:layout_alignParentBottom="true">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_slide_logo" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/app_name" app:typeface="monospace"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/music_recognition_view" android:background="@drawable/click_status_f5f0f1" android:visibility="visible" android:layout_width="match_parent" android:layout_height="50dp">
+            <ImageView android:layout_width="28dp" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@mipmap/icon_music_recognition_gary" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52dp" android:text="@string/music_recognition" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/iv_music_recognition_lock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14dp" android:src="@drawable/icon_lock_music_reg" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="52dp" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/sleep_timer" android:background="@drawable/click_status_f5f0f1" android:layout_width="match_parent" android:layout_height="50dp">
+            <ImageView android:layout_width="28dp" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@drawable/sleep_greytimer" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52dp" android:text="@string/sleep_timer" android:layout_centerVertical="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_969297" android:id="@+id/sleep_timer_real_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52dp" android:layout_marginRight="16dp" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/push_switch_view" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="0.5dp">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@mipmap/icon_push_notification" android:layout_centerVertical="true"/>
+            <CheckBox android:gravity="center_vertical" android:id="@+id/push_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="9dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CustomCheckboxTheme5"/>
+        </RelativeLayout>
+        <View android:layout_width="match_parent" android:layout_height="16dp"/>
+        <RelativeLayout android:id="@+id/remove_ad_view" android:background="@drawable/click_status_f5f0f1" android:visibility="visible" android:layout_width="match_parent" android:layout_height="50dp">
+            <ImageView android:layout_width="28dp" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@drawable/icon_get_premium" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52dp" android:text="@string/get_premium" android:layout_centerVertical="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="10sp" android:textColor="@color/color_ff2d55" android:id="@+id/ad_price_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="9dp" android:text="@string/start_free_trial" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/iv_pur_success" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="9dp" android:src="@drawable/icon_purchased" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="52dp" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rate_us_view" android:background="@drawable/click_status_f5f0f1" android:layout_width="match_parent" android:layout_height="50dp">
+            <ImageView android:layout_width="28dp" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@mipmap/icon_rateus" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52dp" android:text="@string/rate_us" android:layout_centerVertical="true"/>
+            <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="52dp" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/share_app_view" android:background="@drawable/click_status_f5f0f1" android:layout_width="match_parent" android:layout_height="50dp">
+            <ImageView android:layout_width="28dp" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@mipmap/icon_share_app" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52dp" android:text="@string/share_app" android:layout_centerVertical="true"/>
+            <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="52dp" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/about_us_view" android:background="@drawable/click_status_f5f0f1" android:layout_width="match_parent" android:layout_height="50dp">
+            <ImageView android:layout_width="28dp" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@mipmap/icon_about_us" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52dp" android:text="@string/about_us" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/set_view" android:background="@drawable/click_status_f5f0f1" android:layout_width="match_parent" android:layout_height="60dp" android:layout_alignParentBottom="true">
+        <ImageView android:layout_width="28dp" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@mipmap/icon_settings" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52dp" android:text="@string/settings" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</RelativeLayout>

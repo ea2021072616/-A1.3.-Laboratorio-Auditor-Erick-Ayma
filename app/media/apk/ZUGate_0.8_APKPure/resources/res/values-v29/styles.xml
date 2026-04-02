@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ZUGate" parent="@style/AppTheme">
+        <item name="android:statusBarColor">@color/md_theme_light_primary</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="colorChartHW">#e3651d</item>
+        <item name="colorChartSW">#4d7c0f</item>
+        <item name="colorDevice1">#fed7aa</item>
+        <item name="colorDevice10">#ddd6fe</item>
+        <item name="colorDevice11">#fbcfe8</item>
+        <item name="colorDevice2">#fde68a</item>
+        <item name="colorDevice3">#d9f99d</item>
+        <item name="colorDevice4">#bbf7d0</item>
+        <item name="colorDevice5">#a7f3d0</item>
+        <item name="colorDevice6">#a5f3fc</item>
+        <item name="colorDevice7">#bae6fd</item>
+        <item name="colorDevice8">#bfdbfe</item>
+        <item name="colorDevice9">#c7d2fe</item>
+        <item name="toolbarStyle">@style/Theme.ZUGate.ToolbarStyle</item>
+    </style>
+</resources>

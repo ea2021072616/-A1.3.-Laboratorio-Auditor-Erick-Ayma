@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="210dp" android:layout_height="wrap_content" android:translationZ="-5dp" android:elevation="8dp">
+    <LinearLayout android:id="@+id/ll_scan" android:background="@drawable/scan_music_bg" android:layout_width="210dp" android:layout_height="60dp">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/color_4a4a4a" android:gravity="center_vertical" android:background="@drawable/click_menu" android:paddingLeft="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/scan_local_music" android:drawableLeft="@drawable/icon_scan" android:drawablePadding="10dp"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/ll_sort" android:background="@drawable/scan_music_bg" android:layout_width="210dp" android:layout_height="60dp">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/color_4a4a4a" android:gravity="center_vertical" android:background="@drawable/click_menu" android:paddingLeft="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/select_sort_style" android:drawableLeft="@mipmap/icon_order" android:drawablePadding="10dp"/>
+    </LinearLayout>
+</LinearLayout>

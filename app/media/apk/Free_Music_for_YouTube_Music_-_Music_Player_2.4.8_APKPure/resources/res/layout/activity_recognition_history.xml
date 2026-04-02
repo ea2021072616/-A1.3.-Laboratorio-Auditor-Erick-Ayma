@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="20dp">
+        <ImageView android:id="@+id/music_recognition_history_back_view" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/history" android:layout_toRightOf="@+id/music_recognition_history_back_view" android:layout_centerVertical="true" app:typeface="monospace"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="80dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ListView android:id="@+id/music_recognition_history_list" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@color/transparent" android:dividerHeight="0.5dp" android:footerDividersEnabled="false"/>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/music_recognition_history_no_result_view" android:background="@color/color_f7f7f7" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:src="@mipmap/empty_icon"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/color_9b9b9b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/no_recently"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <include layout="@layout/view_player_bar"/>
+    </LinearLayout>
+    <View android:background="@mipmap/ic_shadow" android:layout_width="match_parent" android:layout_height="5dp" android:layout_marginTop="80dp"/>
+</RelativeLayout>

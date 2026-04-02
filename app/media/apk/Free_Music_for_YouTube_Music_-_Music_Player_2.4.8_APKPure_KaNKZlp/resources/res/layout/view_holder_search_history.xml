@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_9b9b9b" android:gravity="center_vertical" android:id="@+id/adapter_search_history_keyword_tx" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginLeft="16dp" android:layout_marginRight="70dp" android:layout_centerVertical="true" app:typeface="normal"/>
+        <ImageView android:id="@+id/adapter_search_history_delete_img" android:padding="16dp" android:layout_width="52dp" android:layout_height="wrap_content" android:src="@mipmap/icon_delete_history" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp"/>
+</LinearLayout>

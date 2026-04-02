@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/max_view" android:background="#b3000000" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/content_panel" android:background="@drawable/bg_white_radius_3dp" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginRight="25dp" android:layout_centerVertical="true">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/color_2b2525" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/whoops" app:typeface="monospace"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:id="@+id/lock_warn_msg_des" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/lock_warn_msg_des" app:typeface="normal"/>
+        <ImageView android:id="@+id/warn_img" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:src="@mipmap/lock_warn_img_2"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ck_panel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <CheckBox android:layout_gravity="center_vertical" android:id="@+id/ck_don_not_again" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/CustomCheckBoxTheme3"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_2b2525" android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:text="@string/dont_show_again" app:typeface="normal"/>
+        </LinearLayout>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/confirm" android:background="@drawable/bt_clear_border" android:layout_width="128dp" android:layout_height="36dp" android:layout_marginTop="14dp" android:layout_marginBottom="16dp" android:text="@string/ok" app:typeface="monospace"/>
+    </LinearLayout>
+</RelativeLayout>

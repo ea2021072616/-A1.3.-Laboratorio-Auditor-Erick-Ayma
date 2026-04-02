@@ -1,0 +1,5 @@
+package com.github.appintro.indicator;
+/* loaded from: classes.dex */
+public final class ProgressIndicatorControllerKt {
+    public static final int DEFAULT_COLOR = 1;
+}

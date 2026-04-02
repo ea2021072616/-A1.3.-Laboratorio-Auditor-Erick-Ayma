@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@drawable/border_album" android:padding="0.5dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.fotoable.youtube.music.ui.view.AlbumCoverImageView android:id="@+id/album_cover" android:layout_width="match_parent" android:layout_height="300dp" android:src="@mipmap/album_cover_def" android:scaleType="centerCrop"/>
+    <RelativeLayout android:id="@+id/album_footer" android:layout_width="match_parent" android:layout_height="56dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginRight="12dp" android:layout_centerVertical="true">
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:ellipsize="end" android:id="@+id/album_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1" app:typeface="monospace"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_676767" android:ellipsize="end" android:id="@+id/song_artists" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:lines="1" app:typeface="normal"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

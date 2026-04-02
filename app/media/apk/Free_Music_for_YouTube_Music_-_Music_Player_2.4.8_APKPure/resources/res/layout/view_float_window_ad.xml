@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/maxView" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/view_root" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="top" android:layout_gravity="bottom|center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_ad_background" android:background="#10ffffff" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="15dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="40dp">
+                    <ImageView android:id="@+id/iv_close_ad" android:layout_width="20dp" android:layout_height="20dp" android:layout_margin="5dp" android:src="@mipmap/btn_close_normal_ad" android:layout_centerVertical="true"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                        <TextView android:id="@+id/tv_remove_ad" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="去广告"/>
+                        <com.fotoable.youtube.music.player.popup.RoundProgressBarForTimer android:id="@+id/progressBar" android:layout_width="23dp" android:layout_height="23dp" android:layout_marginRight="7dp" android:layout_centerVertical="true" app:roundColor="#e3e3e3" app:roundProgressColor="#ff2d55" app:roundWidth="2dp" app:textColor="#ff2d55" app:textSize="10sp"/>
+                        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_enter_app" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="#ff2d55" android:layout_gravity="center" android:id="@+id/tv_ad_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enter" app:typeface="normal"/>
+                            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="#ff2d55" android:layout_gravity="center" android:id="@+id/tv_ad_des_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="FreeMusic" app:typeface="monospace"/>
+                            <ImageView android:layout_gravity="center" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/icon_ad_right_red"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <View android:background="#f1f1f1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="10dp"/>
+                <FrameLayout android:layout_gravity="bottom" android:id="@+id/adview_parent" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

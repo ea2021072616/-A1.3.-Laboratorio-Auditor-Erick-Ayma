@@ -1,0 +1,115 @@
+package com.google.android.exoplayer2.metadata;
+
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import com.google.android.exoplayer2.BaseRenderer;
+import com.google.android.exoplayer2.ExoPlaybackException;
+import com.google.android.exoplayer2.Format;
+import com.google.android.exoplayer2.FormatHolder;
+import com.google.android.exoplayer2.decoder.DecoderInputBuffer;
+import com.google.android.exoplayer2.util.Assertions;
+import java.nio.ByteBuffer;
+/* loaded from: classes.dex */
+public final class MetadataRenderer<T> extends BaseRenderer implements Handler.Callback {
+    private static final int MSG_INVOKE_RENDERER = 0;
+    private final DecoderInputBuffer buffer;
+    private final FormatHolder formatHolder;
+    private boolean inputStreamEnded;
+    private final MetadataDecoder<T> metadataDecoder;
+    private final Output<T> output;
+    private final Handler outputHandler;
+    private T pendingMetadata;
+    private long pendingMetadataTimestamp;
+
+    /* loaded from: classes.dex */
+    public interface Output<T> {
+        void onMetadata(T t);
+    }
+
+    public MetadataRenderer(Output<T> output, Looper looper, MetadataDecoder<T> metadataDecoder) {
+        super(4);
+        this.output = (Output) Assertions.checkNotNull(output);
+        this.outputHandler = looper == null ? null : new Handler(looper, this);
+        this.metadataDecoder = (MetadataDecoder) Assertions.checkNotNull(metadataDecoder);
+        this.formatHolder = new FormatHolder();
+        this.buffer = new DecoderInputBuffer(1);
+    }
+
+    @Override // com.google.android.exoplayer2.RendererCapabilities
+    public int supportsFormat(Format format) {
+        return this.metadataDecoder.canDecode(format.sampleMimeType) ? 3 : 0;
+    }
+
+    @Override // com.google.android.exoplayer2.BaseRenderer
+    protected void onPositionReset(long j, boolean z) {
+        this.pendingMetadata = null;
+        this.inputStreamEnded = false;
+    }
+
+    @Override // com.google.android.exoplayer2.Renderer
+    public void render(long j, long j2) throws ExoPlaybackException {
+        if (!this.inputStreamEnded && this.pendingMetadata == null) {
+            this.buffer.clear();
+            if (readSource(this.formatHolder, this.buffer) == -4) {
+                if (this.buffer.isEndOfStream()) {
+                    this.inputStreamEnded = true;
+                } else {
+                    this.pendingMetadataTimestamp = this.buffer.timeUs;
+                    try {
+                        this.buffer.flip();
+                        ByteBuffer byteBuffer = this.buffer.data;
+                        this.pendingMetadata = this.metadataDecoder.decode(byteBuffer.array(), byteBuffer.limit());
+                    } catch (MetadataDecoderException e) {
+                        throw ExoPlaybackException.createForRenderer(e, getIndex());
+                    }
+                }
+            }
+        }
+        if (this.pendingMetadata != null && this.pendingMetadataTimestamp <= j) {
+            invokeRenderer(this.pendingMetadata);
+            this.pendingMetadata = null;
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // com.google.android.exoplayer2.BaseRenderer
+    public void onDisabled() {
+        this.pendingMetadata = null;
+        super.onDisabled();
+    }
+
+    @Override // com.google.android.exoplayer2.Renderer
+    public boolean isEnded() {
+        return this.inputStreamEnded;
+    }
+
+    @Override // com.google.android.exoplayer2.Renderer
+    public boolean isReady() {
+        return true;
+    }
+
+    private void invokeRenderer(T t) {
+        if (this.outputHandler != null) {
+            this.outputHandler.obtainMessage(0, t).sendToTarget();
+        } else {
+            invokeRendererInternal(t);
+        }
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // android.os.Handler.Callback
+    public boolean handleMessage(Message message) {
+        switch (message.what) {
+            case 0:
+                invokeRendererInternal(message.obj);
+                return true;
+            default:
+                return false;
+        }
+    }
+
+    private void invokeRendererInternal(T t) {
+        this.output.onMetadata(t);
+    }
+}

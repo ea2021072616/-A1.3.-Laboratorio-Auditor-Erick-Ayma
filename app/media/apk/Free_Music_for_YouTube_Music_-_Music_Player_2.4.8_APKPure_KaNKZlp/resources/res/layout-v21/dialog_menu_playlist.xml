@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@android:drawable/dialog_holo_light_frame" android:layout_width="210dp" android:layout_height="wrap_content" android:translationZ="-5dp" android:elevation="8dp">
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_delete" android:background="@drawable/click_menu" android:layout_width="210dp" android:layout_height="60dp">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/color_4a4a4a" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:text="@string/delete_playlist" android:drawableLeft="@mipmap/icon_delete" android:drawablePadding="10dp"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_rename" android:background="@drawable/click_menu" android:layout_width="210dp" android:layout_height="60dp">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/color_4a4a4a" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:text="@string/rename_playlist" android:drawableLeft="@mipmap/icon_rename" android:drawablePadding="10dp"/>
+    </LinearLayout>
+</LinearLayout>

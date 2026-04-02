@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:layout_gravity="bottom" android:id="@+id/toolbar" android:background="@color/all_alpha" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="26dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:layout_marginLeft="16dp">
+            <ImageView android:id="@+id/img_back" android:paddingLeft="-10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="46dp" android:layout_height="46dp" android:src="@mipmap/icon_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="44dp" android:layout_marginRight="80dp" android:text="@string/local_music" android:singleLine="true" android:layout_centerVertical="true" app:typeface="monospace"/>
+            <ImageView android:id="@+id/iv_img" android:padding="4dp" android:visibility="gone" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginRight="14dp" android:src="@mipmap/icon_artist" android:tint="@color/white" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/iv_playing" android:padding="4dp" android:visibility="gone" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginRight="14dp" android:src="@drawable/icon_playing_no" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/app_barLayout">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="80dp" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <com.aspsine.irecyclerview.IRecyclerView android:id="@+id/recycle_view" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent" app:loadMoreFooterLayout="@layout/load_more_footer" app:refreshEnabled="false" app:loadMoreEnabled="true"/>
+            </com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_error" android:background="#fff" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/player_bar_height" android:layout_centerInParent="true">
+                <ImageView android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/failicon"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/something_error" android:gravity="center" android:id="@+id/tv_error" android:clickable="false" android:layout_width="match_parent" android:layout_height="40dp" android:layout_margin="15dp" android:text="@string/something_error" app:typeface="normal"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <include layout="@layout/view_player_bar"/>
+    </LinearLayout>
+</RelativeLayout>

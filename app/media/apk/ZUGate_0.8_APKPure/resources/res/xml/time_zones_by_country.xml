@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timezones>
+    <timezone code="az">Asia/Baku
+    </timezone>
+    <timezone code="ae">Asia/Dubai
+    </timezone>
+    <timezone code="be">Europe/Brussels
+    </timezone>
+    <timezone code="bg">Europe/Sofia
+    </timezone>
+    <timezone code="by">Europe/Minsk
+    </timezone>
+    <timezone code="ch">Europe/Zurich
+    </timezone>
+    <timezone code="cn">Asia/Shanghai
+    </timezone>
+    <timezone code="cn">Asia/Harbin
+    </timezone>
+    <timezone code="cn">Asia/Chongqing
+    </timezone>
+    <timezone code="cn">Asia/Urumqi
+    </timezone>
+    <timezone code="cn">Asia/Kashgar
+    </timezone>
+    <timezone code="cz">Europe/Prague
+    </timezone>
+    <timezone code="de">Europe/Berlin
+    </timezone>
+    <timezone code="ee">Europe/Tallinn
+    </timezone>
+    <timezone code="es">Europe/Madrid
+    </timezone>
+    <timezone code="es">Africa/Ceuta
+    </timezone>
+    <timezone code="es">Atlantic/Canary
+    </timezone>
+    <timezone code="fi">Europe/Helsinki
+    </timezone>
+    <timezone code="fr">Europe/Paris
+    </timezone>
+    <timezone code="gr">Europe/Athens
+    </timezone>
+    <timezone code="hk">Asia/Hong_Kong
+    </timezone>
+    <timezone code="hu">Europe/Budapest
+    </timezone>
+    <timezone code="id">Asia/Jayapura
+    </timezone>
+    <timezone code="id">Asia/Makassar
+    </timezone>
+    <timezone code="id">Asia/Jakarta
+    </timezone>
+    <timezone code="id">Asia/Pontianak
+    </timezone>
+    <timezone code="ie">Europe/Dublin
+    </timezone>
+    <timezone code="il">Asia/Jerusalem
+    </timezone>
+    <timezone code="in">Asia/Calcutta
+    </timezone>
+    <timezone code="is">Atlantic/Reykjavik
+    </timezone>
+    <timezone code="it">Europe/Rome
+    </timezone>
+    <timezone code="jp">Asia/Tokyo
+    </timezone>
+    <timezone code="kp">Asia/Pyongyang
+    </timezone>
+    <timezone code="kr">Asia/Seoul
+    </timezone>
+    <timezone code="kz">Asia/Almaty
+    </timezone>
+    <timezone code="kz">Asia/Qyzylorda
+    </timezone>
+    <timezone code="kz">Asia/Aqtau
+    </timezone>
+    <timezone code="kz">Asia/Oral
+    </timezone>
+    <timezone code="kz">Asia/Aqtobe
+    </timezone>
+    <timezone code="li">Europe/Vaduz
+    </timezone>
+    <timezone code="lt">Europe/Vilnius
+    </timezone>
+    <timezone code="lu">Europe/Luxembourg
+    </timezone>
+    <timezone code="lv">Europe/Riga
+    </timezone>
+    <timezone code="mc">Europe/Monaco
+    </timezone>
+    <timezone code="md">Europe/Chisinau
+    </timezone>
+    <timezone code="me">Europe/Podgorica
+    </timezone>
+    <timezone code="mk">Europe/Skopje
+    </timezone>
+    <timezone code="mm">Asia/Rangoon
+    </timezone>
+    <timezone code="mn">Asia/Choibalsan
+    </timezone>
+    <timezone code="mn">Asia/Ulaanbaatar
+    </timezone>
+    <timezone code="mn">Asia/Hovd
+    </timezone>
+    <timezone code="my">Asia/Kuala_Lumpur
+    </timezone>
+    <timezone code="my">Asia/Kuching
+    </timezone>
+    <timezone code="pf">Pacific/Gambier
+    </timezone>
+    <timezone code="pf">Pacific/Marquesas
+    </timezone>
+    <timezone code="pf">Pacific/Tahiti
+    </timezone>
+    <timezone code="pl">Europe/Warsaw
+    </timezone>
+    <timezone code="pt">Europe/Lisbon
+    </timezone>
+    <timezone code="pt">Atlantic/Madeira
+    </timezone>
+    <timezone code="pt">Atlantic/Azores
+    </timezone>
+    <timezone code="ro">Europe/Bucharest
+    </timezone>
+    <timezone code="rs">Europe/Belgrade
+    </timezone>
+    <timezone code="ru">Asia/Kamchatka
+    </timezone>
+    <timezone code="ru">Asia/Anadyr
+    </timezone>
+    <timezone code="ru">Asia/Magadan
+    </timezone>
+    <timezone code="ru">Asia/Vladivostok
+    </timezone>
+    <timezone code="ru">Asia/Sakhalin
+    </timezone>
+    <timezone code="ru">Asia/Yakutsk
+    </timezone>
+    <timezone code="ru">Asia/Irkutsk
+    </timezone>
+    <timezone code="ru">Asia/Krasnoyarsk
+    </timezone>
+    <timezone code="ru">Asia/Novosibirsk
+    </timezone>
+    <timezone code="ru">Asia/Omsk
+    </timezone>
+    <timezone code="ru">Asia/Yekaterinburg
+    </timezone>
+    <timezone code="ru">Europe/Samara
+    </timezone>
+    <timezone code="ru">Europe/Moscow
+    </timezone>
+    <timezone code="ru">Europe/Volgograd
+    </timezone>
+    <timezone code="ru">Europe/Kaliningrad
+    </timezone>
+    <timezone code="sa">Asia/Riyadh
+    </timezone>
+    <timezone code="se">Europe/Stockholm
+    </timezone>
+    <timezone code="sg">Asia/Singapore
+    </timezone>
+    <timezone code="si">Europe/Ljubljana
+    </timezone>
+    <timezone code="sk">Europe/Bratislava
+    </timezone>
+    <timezone code="sy">Asia/Damascus
+    </timezone>
+    <timezone code="tf">Indian/Kerguelen
+    </timezone>
+    <timezone code="tm">Asia/Ashgabat
+    </timezone>
+    <timezone code="tr">Europe/Istanbul
+    </timezone>
+    <timezone code="tw">Asia/Taipei
+    </timezone>
+    <timezone code="ua">Europe/Kiev
+    </timezone>
+    <timezone code="ua">Europe/Uzhgorod
+    </timezone>
+    <timezone code="ua">Europe/Zaporozhye
+    </timezone>
+    <timezone code="ua">Europe/Simferopol
+    </timezone>
+    <timezone code="uz">Asia/Tashkent
+    </timezone>
+    <timezone code="uz">Asia/Samarkand
+    </timezone>
+    <timezone code="va">Europe/Vatican
+    </timezone>
+    <timezone code="vn">Asia/Saigon
+    </timezone>
+    <timezone code="vu">Pacific/Efate
+    </timezone>
+    <timezone code="wf">Pacific/Wallis
+    </timezone>
+    <timezone code="ws">Pacific/Apia
+    </timezone>
+    <timezone code="ye">Asia/Aden
+    </timezone>
+    <timezone code="yt">Indian/Mayotte
+    </timezone>
+</timezones>

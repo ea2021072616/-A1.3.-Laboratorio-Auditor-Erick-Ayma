@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:id="@+id/tool_bar_panel" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="26dp">
+        <ImageView android:id="@+id/back_view" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/player_settings" android:layout_toRightOf="@+id/back_view" android:layout_centerVertical="true" app:typeface="monospace"/>
+    </RelativeLayout>
+    <ScrollView android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/player_bar_height" android:layout_below="@+id/tool_bar_panel">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/rl_auto_rotate_screen" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="80dp">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="52dp" android:layout_centerVertical="true">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_rotate_screen" app:typeface="normal"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_676767" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/auto_rotate_screen_des" app:typeface="normal"/>
+                </LinearLayout>
+                <CheckBox android:gravity="center_vertical" android:id="@+id/ck_auto_rotate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CustomCheckBoxTheme"/>
+                <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rl_pop_up_size" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="80dp">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pop_up_player_size" app:typeface="normal"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_676767" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/change_the_size_of_the_pop_up" app:typeface="normal"/>
+                </LinearLayout>
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="9dp" android:src="@mipmap/chevron_right" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rl_auto_play" android:background="@color/white" android:layout_width="match_parent" android:layout_height="80dp">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="52dp" android:layout_centerVertical="true">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_play" app:typeface="normal"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_676767" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/after_watching_a_video_we_will_automatically_play_another_related_video" app:typeface="normal"/>
+                </LinearLayout>
+                <CheckBox android:gravity="center_vertical" android:id="@+id/ck_auto_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CustomCheckBoxTheme"/>
+                <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rl_action_bar" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="80dp">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="52dp" android:layout_centerVertical="true">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pop_up_player_action_bar" app:typeface="normal"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_676767" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/add_a_quick_access_bar_to_the_pop_up_player" app:typeface="normal"/>
+                </LinearLayout>
+                <CheckBox android:gravity="center_vertical" android:id="@+id/ck_action_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CustomCheckBoxTheme"/>
+                <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rl_wifi_only" android:background="@color/white" android:layout_width="match_parent" android:layout_height="80dp">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="52dp" android:layout_centerVertical="true">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wifi_only" app:typeface="normal"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_676767" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/only_play_videos_when_connected_to_wifi" app:typeface="normal"/>
+                </LinearLayout>
+                <CheckBox android:gravity="center_vertical" android:id="@+id/ck_wifi_only" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CustomCheckBoxTheme"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <View android:id="@+id/shadow_view" android:background="@mipmap/ic_shadow" android:layout_width="match_parent" android:layout_height="5dp" android:layout_marginTop="80dp"/>
+    <include layout="@layout/view_player_bar"/>
+</RelativeLayout>

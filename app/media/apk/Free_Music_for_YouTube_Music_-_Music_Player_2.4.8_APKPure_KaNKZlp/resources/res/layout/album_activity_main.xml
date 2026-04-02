@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/album_MatchParent">
+    <com.yanzhenjie.statusview.NavigationView android:id="@+id/navigation_view" android:layout_alignParentBottom="true" style="@style/album_WrapContent.WidthMatchParent"/>
+    <FrameLayout android:id="@+id/album_root_frame_layout" android:background="@color/album_White" android:layout_above="@+id/navigation_view" style="@style/album_MatchParent"/>
+</RelativeLayout>

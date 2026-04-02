@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/maxView" android:background="@color/alpha_000_66" android:layout_width="match_parent" android:layout_height="60dp">
+    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@mipmap/popup_video_close" android:layout_centerInParent="true"/>
+</RelativeLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center" android:orientation="horizontal" android:background="@color/color_fff8f8f8" android:layout_width="match_parent" android:layout_height="55dp">
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/ffd8d8d8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/the_end" android:drawableLeft="@drawable/line_theend" android:drawableRight="@drawable/line_theend" android:drawablePadding="10dp" android:textAllCaps="true" app:typeface="normal"/>
+</LinearLayout>

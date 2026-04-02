@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_gravity="bottom" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+    <View android:background="@color/color_c8c7cc" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/bottom_player_youtube_panel" android:visibility="gone" android:layout_width="match_parent" android:layout_height="100dp">
+            <ImageView android:id="@+id/music_cover_youtube" android:visibility="visible" android:layout_width="178dp" android:layout_height="100dp" android:src="@mipmap/widget_default_cover" android:scaleType="centerCrop"/>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="8dp" android:paddingTop="4dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toRightOf="@+id/music_cover_youtube">
+                <com.fotoable.youtube.music.ui.view.MarqueeTextView android:textSize="14sp" android:textColor="@color/color_343434" android:ellipsize="end" android:id="@+id/music_name_youtube" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/welcome_to_freemusic_tube_enjoy_your_music" android:maxLines="1" android:singleLine="true" app:typeface="normal"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/to_youtube_panel" android:paddingTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="10sp" android:textColor="#8c8c8c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/powered_by" app:typeface="sans"/>
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:src="@drawable/bottom_bar_youtube"/>
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:src="@drawable/bottom_bar_expand"/>
+                </LinearLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <RelativeLayout android:id="@+id/play_panel_youtube" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                        <com.fotoable.youtube.music.ui.view.CircleProgressView android:id="@+id/play_progress_youtube" android:layout_width="28dp" android:layout_height="28dp" android:layout_centerVertical="true"/>
+                        <ImageView android:id="@+id/play_state_youtube" android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/bt_change_play_bar_state" android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+                    <ImageView android:id="@+id/play_list_youtube" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_play_lists" android:tint="#c8bcbe" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/bottom_player_panel" android:layout_width="match_parent" android:layout_height="56dp">
+            <RelativeLayout android:id="@+id/cover_panel" android:layout_width="wrap_content" android:layout_height="match_parent">
+                <ImageView android:id="@+id/music_cover" android:visibility="gone" android:layout_width="100dp" android:layout_height="56dp" android:src="@mipmap/widget_default_cover" android:scaleType="centerCrop"/>
+                <ImageView android:id="@+id/music_cover2" android:layout_width="56dp" android:layout_height="56dp" android:src="@mipmap/widget_default_cover" android:scaleType="centerCrop"/>
+            </RelativeLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toLeftOf="@+id/btn_panel" android:layout_toRightOf="@+id/cover_panel">
+                <com.fotoable.youtube.music.ui.view.MarqueeTextView android:textSize="14sp" android:textColor="@color/color_343434" android:ellipsize="end" android:id="@+id/music_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:layout_marginRight="12dp" android:text="@string/welcome_to_freemusic_tube_enjoy_your_music" android:maxLines="1" android:singleLine="true" android:layout_centerVertical="true" app:typeface="normal"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_676767" android:ellipsize="end" android:id="@+id/music_artists" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:layout_marginTop="4dp" android:layout_marginRight="12dp" android:text="" android:maxLines="1" android:layout_centerVertical="true" app:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/btn_panel" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentRight="true">
+                <RelativeLayout android:id="@+id/play_panel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:layout_marginRight="16dp" android:layout_toLeftOf="@+id/play_list" android:layout_centerVertical="true">
+                    <com.fotoable.youtube.music.ui.view.CircleProgressView android:id="@+id/play_progress" android:layout_width="28dp" android:layout_height="28dp" android:layout_centerVertical="true"/>
+                    <ImageView android:id="@+id/play_state" android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/bt_change_play_bar_state" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <ImageView android:id="@+id/play_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:src="@mipmap/icon_play_lists" android:tint="#c8bcbe" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

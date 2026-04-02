@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/float_player_root" android:padding="0.5dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/bg2" android:background="@drawable/shape_player_border" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.fotoable.youtube.music.ui.view.ProgressWheel android:id="@+id/loading" android:visibility="visible" android:layout_width="35dp" android:layout_height="35dp" android:layout_centerInParent="true" app:matProg_progressIndeterminate="true" app:matProg_barColor="@color/white" app:matProg_circleRadius="12dp" app:matProg_barWidth="1.5dp"/>
+    <RelativeLayout android:id="@+id/player_container" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0">
+        <com.fotoable.youtube.music.ui.view.YoutubePlayerView android:id="@+id/youtube_player" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <ImageView android:id="@+id/float_small_power_bt" android:padding="0dp" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="1dp" android:layout_marginTop="1dp" android:src="@mipmap/float_small_power" android:alpha="0.7"/>
+        <ImageView android:id="@+id/small_saver_power_red_tip" android:background="@drawable/shape_red_3dp" android:visibility="gone" android:layout_width="6dp" android:layout_height="6dp" android:layout_marginLeft="15dp" android:layout_marginTop="4dp"/>
+        <ImageView android:id="@+id/mark_youtube" android:visibility="gone" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginRight="12dp" android:layout_marginBottom="12dp" android:src="@mipmap/mark_youtube" android:scaleType="fitEnd" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+        <RelativeLayout android:id="@+id/player_control_layer" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/play_top_panel" android:visibility="gone" android:layout_width="match_parent" android:layout_height="43dp">
+                <ImageView android:id="@+id/back_view" android:paddingLeft="12dp" android:paddingTop="9dp" android:paddingRight="12dp" android:paddingBottom="9dp" android:layout_width="49dp" android:layout_height="43dp" android:src="@mipmap/icon_back"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/video_title2" android:layout_width="match_parent" android:layout_height="43dp" android:maxLines="1" android:layout_toLeftOf="@+id/right_close_panel" android:layout_toRightOf="@+id/back_view" app:typeface="monospace"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/right_close_panel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                    <ImageView android:id="@+id/close_view" android:paddingLeft="12dp" android:paddingTop="9dp" android:paddingRight="12dp" android:paddingBottom="9dp" android:layout_width="42dp" android:layout_height="43dp" android:src="@mipmap/video_close"/>
+                    <ImageView android:id="@+id/to_youtube" android:paddingLeft="7dp" android:paddingRight="7dp" android:layout_width="wrap_content" android:layout_height="43dp" android:src="@drawable/float_youtube"/>
+                    <ImageView android:id="@+id/video_share2" android:paddingLeft="7dp" android:paddingTop="9dp" android:paddingRight="7dp" android:paddingBottom="9dp" android:layout_width="35dp" android:layout_height="43dp" android:src="@mipmap/icon_small_share"/>
+                    <ImageView android:id="@+id/more_options" android:paddingLeft="12dp" android:paddingTop="10dp" android:paddingRight="12dp" android:paddingBottom="10dp" android:layout_width="35dp" android:layout_height="43dp" android:src="@mipmap/float_more"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/play_menu_panel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageView android:id="@+id/loop_model2" android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/bt_change_play_model"/>
+                <ImageView android:id="@+id/play_back2" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginLeft="40dp" android:src="@mipmap/icon_playback"/>
+                <RelativeLayout android:layout_width="58dp" android:layout_height="58dp" android:layout_marginLeft="44dp">
+                    <ImageView android:id="@+id/change_play_state2" android:visibility="gone" android:layout_width="58dp" android:layout_height="58dp" android:src="@drawable/bt_change_play_state"/>
+                    <ImageView android:id="@+id/play_loading3" android:layout_width="58dp" android:layout_height="58dp" android:src="@mipmap/icon_stoploading0"/>
+                </RelativeLayout>
+                <ImageView android:id="@+id/play_next2" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginLeft="44dp" android:src="@mipmap/icon_playnext"/>
+                <ImageView android:id="@+id/video_favorite_state2" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginLeft="40dp" android:src="@drawable/bt_change_play_favorite"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/float_lock_op" android:padding="4dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:src="@drawable/bt_change_float_lock" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/play_progress_panel" android:paddingBottom="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="11dp" android:layout_alignParentBottom="true">
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/white" android:id="@+id/video_play_current_time2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:00" app:typeface="normal"/>
+                <SeekBar android:id="@+id/video_seek_bar2" android:paddingLeft="5dp" android:paddingRight="5dp" android:focusable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:maxHeight="2dp" android:progressDrawable="@drawable/po_seekbar" android:minHeight="2dp" android:thumb="@drawable/seekbar_thumb" android:layout_weight="1"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/white" android:id="@+id/video_play_total_time2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:00" app:typeface="normal"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/video_hd" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="HD" app:typeface="normal"/>
+                <ImageView android:id="@+id/video_screen_state" android:padding="5dp" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="13dp" android:src="@mipmap/icon_fullscreen_exit"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/more_options_panel" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/more_options_panel_content" android:background="@color/white" android:layout_width="240dp" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginRight="8dp" android:layout_alignParentRight="true">
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/find_lyric" android:layout_width="match_parent" android:layout_height="48dp">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_marginLeft="16dp" android:src="@mipmap/float_search_lyric" android:tint="@color/color_b6afb0"/>
+                <TextView android:textSize="16sp" android:textColor="#4a4a4a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/find_lyric"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/find_mp3_resource" android:layout_width="match_parent" android:layout_height="48dp">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_marginLeft="16dp" android:src="@mipmap/float_search_mp3" android:tint="@color/color_b6afb0"/>
+                <TextView android:textSize="16sp" android:textColor="#4a4a4a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/find_mp3"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:id="@+id/ll_more" android:paddingLeft="60dp" android:paddingRight="60dp" android:layout_width="match_parent" android:layout_height="62dp">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_marginTop="12dp" android:layout_centerHorizontal="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_6d6363" android:gravity="center" android:id="@+id/tv_artists" android:paddingRight="0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more_online_music" android:lines="1" app:typeface="normal"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_6d6363" android:ellipsize="middle" android:gravity="center" android:id="@+id/tv_artists2" android:paddingLeft="0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:lines="1" app:typeface="normal"/>
+        </LinearLayout>
+        <View android:layout_gravity="center" android:background="@color/color_6d6363" android:layout_width="match_parent" android:layout_height="1dp"/>
+    </LinearLayout>
+</RelativeLayout>

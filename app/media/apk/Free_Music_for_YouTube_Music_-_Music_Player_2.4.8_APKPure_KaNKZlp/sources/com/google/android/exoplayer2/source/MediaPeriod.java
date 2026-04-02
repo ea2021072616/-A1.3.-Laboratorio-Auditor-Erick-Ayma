@@ -1,0 +1,27 @@
+package com.google.android.exoplayer2.source;
+
+import com.google.android.exoplayer2.source.SequenceableLoader;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
+import java.io.IOException;
+/* loaded from: classes.dex */
+public interface MediaPeriod extends SequenceableLoader {
+
+    /* loaded from: classes.dex */
+    public interface Callback extends SequenceableLoader.Callback<MediaPeriod> {
+        void onPrepared(MediaPeriod mediaPeriod);
+    }
+
+    long getBufferedPositionUs();
+
+    TrackGroupArray getTrackGroups();
+
+    void maybeThrowPrepareError() throws IOException;
+
+    void prepare(Callback callback);
+
+    long readDiscontinuity();
+
+    long seekToUs(long j);
+
+    long selectTracks(TrackSelection[] trackSelectionArr, boolean[] zArr, SampleStream[] sampleStreamArr, boolean[] zArr2, long j);
+}

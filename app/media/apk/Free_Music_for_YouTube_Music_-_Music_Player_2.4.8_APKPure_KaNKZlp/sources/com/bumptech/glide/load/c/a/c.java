@@ -1,0 +1,29 @@
+package com.bumptech.glide.load.c.a;
+
+import android.content.Context;
+import android.net.Uri;
+import android.os.ParcelFileDescriptor;
+import com.bumptech.glide.load.c.l;
+import com.bumptech.glide.load.c.m;
+import com.bumptech.glide.load.c.n;
+/* compiled from: FileDescriptorResourceLoader.java */
+/* loaded from: classes.dex */
+public class c extends n<ParcelFileDescriptor> implements b<Integer> {
+
+    /* compiled from: FileDescriptorResourceLoader.java */
+    /* loaded from: classes.dex */
+    public static class a implements m<Integer, ParcelFileDescriptor> {
+        @Override // com.bumptech.glide.load.c.m
+        public l<Integer, ParcelFileDescriptor> a(Context context, com.bumptech.glide.load.c.c cVar) {
+            return new c(context, cVar.a(Uri.class, ParcelFileDescriptor.class));
+        }
+
+        @Override // com.bumptech.glide.load.c.m
+        public void a() {
+        }
+    }
+
+    public c(Context context, l<Uri, ParcelFileDescriptor> lVar) {
+        super(context, lVar);
+    }
+}

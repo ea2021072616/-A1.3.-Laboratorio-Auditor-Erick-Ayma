@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.fotoable.youtube.music.ui.view.SimpleViewPagerIndicator android:gravity="bottom" android:layout_gravity="bottom" android:id="@+id/tab_layout" android:background="@color/white" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="44dp"/>
+    <android.support.v4.view.ViewPager android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/tab_layout"/>
+    <View android:id="@+id/shadow_view" android:background="@mipmap/ic_shadow" android:visibility="gone" android:layout_width="match_parent" android:layout_height="5dp" android:layout_below="@+id/tab_layout"/>
+</RelativeLayout>

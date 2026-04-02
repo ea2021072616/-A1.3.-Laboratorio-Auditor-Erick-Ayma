@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_loading_radius_8dp" android:layout_width="100dp" android:layout_height="100dp">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true">
+            <com.fotoable.youtube.music.ui.view.ProgressWheel android:id="@+id/loading" android:visibility="visible" android:layout_width="70dp" android:layout_height="70dp" app:matProg_progressIndeterminate="true" app:matProg_barColor="@color/white" app:matProg_circleRadius="18dp" app:matProg_barWidth="2dp"/>
+            <TextView android:textSize="12sp" android:textColor="#ffffff" android:id="@+id/loading_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/is_being_deleted"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

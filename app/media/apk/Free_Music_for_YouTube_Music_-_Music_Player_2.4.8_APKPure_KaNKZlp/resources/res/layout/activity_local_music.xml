@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/fragment_home"/>
+    <RelativeLayout android:id="@+id/no_permission_panel" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/no_permission_content" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_centerInParent="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/failicon"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/cancel_permission_tip" app:typeface="normal"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/ffff2d55" android:gravity="center" android:id="@+id/open_permission_bt" android:background="@drawable/bt_open_permission" android:paddingLeft="25dp" android:paddingRight="25dp" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginTop="32dp" android:text="@string/open_permission" app:typeface="normal"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

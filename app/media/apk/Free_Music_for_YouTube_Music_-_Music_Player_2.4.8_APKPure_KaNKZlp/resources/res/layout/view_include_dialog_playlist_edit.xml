@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@+id/add_play_list_ll" android:background="@drawable/shape_white_corner" android:layout_width="282dp" android:layout_height="156dp">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/color_2b2525" android:id="@+id/playlist_title_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14sp" android:layout_marginTop="20dp" android:text="@string/create_new_playlist"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp">
+                <com.fotoable.youtube.music.ui.view.LaToEditTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:textColorHint="@color/color_c8c7cc" android:id="@+id/playlist_edit" android:background="@color/transparent" android:layout_width="200dp" android:layout_height="20dp" android:hint="@string/enter_playlist_name" android:maxLines="1" android:singleLine="true" android:maxLength="40" android:textCursorDrawable="@drawable/color_cursor"/>
+                <View android:background="@color/color_9b9b9b" android:layout_width="200dp" android:layout_height="0.5dp"/>
+            </LinearLayout>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_c8c7cc" android:id="@+id/playlist_edit_count_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="19dp" android:text="0/40" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/dialog_btn_selector" android:gravity="center" android:id="@+id/cancel_tx" android:background="@drawable/dialog_btn_edit_playlist_selector" android:layout_width="70dp" android:layout_height="32dp" android:text="@string/cancel"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:enabled="false" android:textSize="14sp" android:textColor="@color/dialog_btn_selector" android:gravity="center" android:id="@+id/ok_tx" android:background="@drawable/dialog_btn_edit_playlist_selector" android:layout_width="70dp" android:layout_height="32dp" android:layout_marginLeft="15dp" android:layout_marginRight="26dp" android:text="@string/ok"/>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

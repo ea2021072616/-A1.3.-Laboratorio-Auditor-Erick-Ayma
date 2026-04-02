@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="43" android:versionName="2.4.8" package="com.fotoable.free.music" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/icon" android:name="com.fotoable.youtube.music.MusicApplication" android:allowBackup="true" android:hardwareAccelerated="true" android:largeHeap="true" android:supportsRtl="true">
+        <meta-data android:name="io.fabric.ApiKey" android:value="cf2cd6c74163780b5b5e4c19b7216ee0170d5d8a"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_id"/>
+        <activity android:theme="@style/AppThemeForSplash" android:name="com.fotoable.youtube.music.ui.activity.SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/MainTheme" android:name="com.fotoable.youtube.music.ui.activity.MainActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <receiver android:name="com.fotoable.youtube.music.receiver.BootCompletedReceiver" android:exported="true">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_TICK"/>
+                <category android:name="android.intent.category.HOME"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.SearchActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.MusicRecognitionActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.MusicRecognitionHistoryActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.SettingsActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.PlayListDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.MyFavoriteActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.MySubscriptionActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.MyRecentlyWatchedActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.GlobalMusicDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.ClassifiedMusicDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.MyPlaylistDetailActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.MyPlaylistActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.HomeListActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.PlaySettingsActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.Radio1Activity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.RadioActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.RadioListActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.RadioHomeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.CountryActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.ArtistsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.GenresActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.AboutActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.ChartsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.JoinOurCommunityActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.LocalArtistsDetailActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.LocalAlbumDetailActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.LocalSearchMusicActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.EditorChoicePlayListActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.FeaturedPlayListDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <service android:name="com.fotoable.youtube.music.service.NotificationService" android:enabled="true" android:exported="false" android:process=":notificationProcess"/>
+        <receiver android:name="com.fotoable.youtube.music.receiver.MusicReceiver" android:exported="false"/>
+        <receiver android:name="com.fotoable.youtube.music.receiver.NetWorkReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.fotoable.youtube.music.receiver.AlarmReceiver">
+            <intent-filter>
+                <action android:name="freemusic.alarm.action"/>
+                <action android:name="android.intent.action.TIME_TICK"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.ArtistsDetailActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.GenresDetailActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <receiver android:name="com.fotoable.youtube.music.receiver.PeriodicRefreshReceiver" android:exported="false"/>
+        <service android:name="com.fotoable.youtube.music.service.MusicWidgetService" android:enabled="true" android:exported="true" android:priority="999"/>
+        <receiver android:name="com.fotoable.youtube.music.ui.widget.MusicWidgetSmall" android:priority="999">
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_provider_music"/>
+            <intent-filter>
+                <action android:name="com.fotoable.free.music.appwidget.action.update_data_state"/>
+                <action android:name="com.fotoable.free.music.appwidget.action.play_music"/>
+                <action android:name="com.fotoable.free.music.appwidget.action.pause_music"/>
+                <action android:name="com.fotoable.free.music.appwidget.action.to_search_page"/>
+                <action android:name="com.fotoable.free.music.appwidget.action.to_player_v"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/AppThemeForGuide" android:name="com.fotoable.youtube.music.ui.activity.PlayerActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppThemeForGuide" android:name="com.fotoable.youtube.music.ui.activity.YoutubeGuideTipActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.TimerActivity"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.LocalCreatedPlaylistDetailActivity"/>
+        <activity android:theme="@style/WallpaperTheme" android:name="com.fotoable.youtube.music.locker.activity.LockerScreenActivity" android:launchMode="singleInstance" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/common_theme" android:name="com.fotoable.youtube.music.ui.activity.YoutubeCommentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateAlwaysVisible|stateHidden"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.UserInfoActivity"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.CommunityPostActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.fotoable.youtube.music.ui.activity.CommunityPostImagePreviewActivity"/>
+        <activity android:theme="@style/common_theme" android:name="com.fotoable.youtube.music.ui.activity.CommunityPostDetailActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateAlwaysVisible|stateHidden"/>
+        <activity android:theme="@style/AppThemeForGuide" android:name="com.fotoable.youtube.music.ui.activity.SubscriptionActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppThemeForGuide" android:name="com.fotoable.youtube.music.ui.activity.AboutSubscriptionActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <service android:name="com.fotoable.youtube.music.quicktools.service.QuickToolsService" android:exported="true"/>
+        <service android:name="com.fotoable.youtube.music.newplayer.service.PlayerService" android:enabled="true" android:exported="true" android:process=":player">
+            <intent-filter>
+                <action android:name="com.fotoable.youtube.music.newplayer.service.PlayerService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.fotoable.youtube.music.service.MainService"/>
+        <receiver android:name="com.fotoable.youtube.music.newplayer.receiver.MediaButtonIntentReceiver" android:process=":player">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.fotoable.youtube.music.newplayer.receiver.SystemReceiver"/>
+        <receiver android:name="com.fotoable.youtube.music.receiver.MusicNotifiCancelReceiver">
+            <intent-filter>
+                <action android:name="removenotification"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.fotoable.youtube.music.helper.localmusic.MusicNotifyResetService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <meta-data android:name="com.fotoable.youtube.music.locker.GlideConfiguration" android:value="GlideModule"/>
+        <provider android:name="android.support.v4.content.FileProvider" android:exported="false" android:authorities="com.fotoable.free.music.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:theme="@style/album_ChoiceActivity" android:name="com.yanzhenjie.album.ui.AlbumActivity" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/album_ChoiceActivity" android:name="com.yanzhenjie.album.ui.GalleryActivity" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/album_ChoiceActivity" android:name="com.yanzhenjie.album.ui.GalleryAlbumActivity" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/album_TransparentActivity" android:name="com.yanzhenjie.album.ui.CameraActivity" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider android:name="com.yanzhenjie.album.provider.CameraFileProvider" android:exported="false" android:multiprocess="true" android:authorities="com.fotoable.free.music.album.camera.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/album_camera_provider"/>
+        </provider>
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+        <activity android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:name="com.yanzhenjie.durban.DurbanActivity" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/EasyPermissions.Transparent" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:exported="false"/>
+        <activity android:name="com.facebook.ads.AudienceNetworkActivity" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/com_facebook_activity_theme" android:name="com.facebook.FacebookActivity" android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity"/>
+        <provider android:name="com.facebook.marketing.internal.MarketingInitProvider" android:exported="false" android:authorities="com.fotoable.free.music.MarketingInitProvider"/>
+        <provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false" android:authorities="com.fotoable.free.music.FacebookInitProvider"/>
+        <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@android:style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

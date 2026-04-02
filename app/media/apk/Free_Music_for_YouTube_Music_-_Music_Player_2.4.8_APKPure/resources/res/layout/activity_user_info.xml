@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/tool_bar_panel" android:layout_width="match_parent" android:layout_height="80dp">
+        <ImageView android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="26dp">
+            <ImageView android:id="@+id/back_view" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/personal_profile" android:layout_toRightOf="@+id/back_view" android:layout_centerVertical="true" app:typeface="monospace"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <ScrollView android:background="#fafafa" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/user_avatar_panel" android:background="@color/white" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="12dp">
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/portrait" android:layout_toLeftOf="@+id/user_avatar" android:layout_centerVertical="true" app:typeface="normal"/>
+                <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/user_avatar" android:layout_width="38dp" android:layout_height="38dp" android:layout_marginRight="16dp" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:riv_corner_radius="19dp"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/user_name_panel" android:background="@color/white" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="12dp">
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/name" android:layout_toLeftOf="@+id/user_name" android:layout_centerVertical="true" app:typeface="normal"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_9b9b9b" android:id="@+id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="Lemon2008" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:typeface="normal"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

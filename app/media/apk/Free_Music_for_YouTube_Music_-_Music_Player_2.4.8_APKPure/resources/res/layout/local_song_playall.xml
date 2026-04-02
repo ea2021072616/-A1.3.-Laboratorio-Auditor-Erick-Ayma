@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/rl_play" android:background="@drawable/click_status" android:layout_width="match_parent" android:layout_height="40.5dp">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:src="@mipmap/shuffle_model" android:layout_centerVertical="true"/>
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:id="@+id/tv_playall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="44dp" android:text="@string/shuffle_play" android:layout_centerVertical="true" app:typeface="normal"/>
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_6d6363" android:id="@+id/tv_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="@string/local_music_count" android:layout_toRightOf="@+id/tv_playall" android:layout_centerVertical="true"/>
+    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="@dimen/weather_widget_min_width" android:minHeight="@dimen/weather_widget_min_height" android:initialLayout="@layout/widget_music_4_x_2" android:previewImage="@mipmap/widget_small_preview" android:resizeMode="horizontal"/>

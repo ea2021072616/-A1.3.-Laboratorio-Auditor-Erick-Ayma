@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@+id/app_barLayout" android:layout_width="match_parent" android:layout_height="180dp">
+        <android.support.design.widget.CollapsingToolbarLayout android:id="@+id/CollapsingToolbarLayout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:expandedTitleMarginStart="48dp" app:expandedTitleMarginEnd="64dp">
+            <ImageView android:id="@+id/main_backdrop" android:layout_width="match_parent" android:layout_height="180dp" android:src="@mipmap/loadingbg" android:scaleType="centerCrop" app:layout_collapseMode="parallax"/>
+            <RelativeLayout android:layout_gravity="bottom" android:id="@+id/rl_details" android:layout_width="match_parent" android:layout_height="110dp">
+                <com.fotoable.youtube.music.ui.view.RoundImageView android:id="@+id/iv_LoadingPic" android:background="@mipmap/loadingpic" android:layout_width="94dp" android:layout_height="94dp" android:layout_marginLeft="16dp" android:scaleType="centerCrop" android:adjustViewBounds="true" android:elevation="5dp" app:riv_leftTopRadius="3dp" app:riv_rightTopRadius="3dp" app:riv_rightBottomRadius="3dp" app:riv_leftBottomRadius="3dp"/>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="94dp" android:layout_marginLeft="16dp" android:layout_toRightOf="@+id/iv_LoadingPic">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:ellipsize="end" android:id="@+id/text_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="Let’s enjoy the Autumndays" android:maxLines="2" app:typeface="monospace"/>
+                    <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.5dp">
+                        <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@mipmap/icon_subscription_people"/>
+                        <TextView android:id="@+id/text_people" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="7,265"/>
+                        <ImageView android:layout_width="15dp" android:layout_height="15dp" android:layout_marginLeft="20dp" android:src="@mipmap/icon_songs"/>
+                        <TextView android:id="@+id/text_listen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="7,265"/>
+                    </LinearLayout>
+                    <CheckBox android:textColor="@color/tag_sub_selector" android:gravity="center" android:id="@+id/che_subscribed" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/collect_playlist" android:drawableLeft="@drawable/check_subscribed_selector" android:drawablePadding="5dp" android:layout_alignParentBottom="true" style="@style/img_lick"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <android.support.v7.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize" android:layout_marginTop="15dp" app:layout_collapseMode="pin">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/status_bar_height">
+                    <ImageView android:id="@+id/img_back" android:paddingLeft="-10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="46dp" android:layout_height="46dp" android:src="@mipmap/icon_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                    <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="20dp" android:text="@string/pop_music" android:maxLines="1" android:layout_toRightOf="@+id/img_back" android:layout_centerVertical="true"/>
+                    <ImageView android:id="@+id/img_del" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14dp" android:src="@mipmap/icon_playlist_delete" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <com.aspsine.irecyclerview.IRecyclerView android:id="@+id/recycle_pop" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" app:loadMoreFooterLayout="@layout/load_more_footer" app:refreshEnabled="false" app:loadMoreEnabled="true"/>
+            </com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout>
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/ll_error" android:background="#fff" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <ImageView android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="70dp" android:src="@mipmap/failicon"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/something_error" android:gravity="center" android:id="@+id/tv_error" android:clickable="false" android:layout_width="match_parent" android:layout_height="40dp" android:layout_margin="15dp" android:text="@string/something_error" app:typeface="normal"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <View android:id="@+id/empty_bottom_bar" android:layout_width="match_parent" android:layout_height="56dp"/>
+    </LinearLayout>
+    <include layout="@layout/view_player_bar"/>
+    <Button android:layout_gravity="top|right" android:id="@+id/iv_play_all" android:background="@drawable/check_playall_selector" android:layout_width="45dp" android:layout_height="45dp" android:layout_marginTop="-22.5dp" android:layout_marginRight="25.5dp" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/album_ColorPrimaryBlack" style="@style/album_MatchParent">
+    <com.yanzhenjie.album.widget.photoview.FixViewPager android:id="@+id/view_pager" style="@style/album_MatchParent"/>
+    <LinearLayout android:orientation="vertical" android:layout_alignParentTop="true" style="@style/album_WrapContent.WidthMatchParent">
+        <com.yanzhenjie.statusview.StatusView android:background="@color/album_Transparent" style="@style/album_WrapContent.WidthMatchParent"/>
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar" android:background="@color/album_Transparent" style="@style/album_Toolbar"/>
+    </LinearLayout>
+    <FrameLayout android:layout_alignParentBottom="true" style="@style/album_WrapContent.WidthMatchParent">
+        <RelativeLayout android:id="@+id/bottom_root" android:background="@color/album_SheetBackground" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+            <TextView android:textColor="@color/album_FontLight" android:gravity="center" android:id="@+id/tv_duration" android:visibility="gone" android:layout_marginLeft="@dimen/album_dp_6" android:maxLines="1" android:drawableLeft="@drawable/album_tag_video_white" android:drawablePadding="@dimen/album_dp_4" android:layout_centerVertical="true" android:drawableStart="@drawable/album_tag_video_white" style="@style/album_WrapContent"/>
+            <android.support.v7.widget.AppCompatCheckBox android:textSize="@dimen/album_sp_16" android:textColor="@color/album_FontLight" android:id="@+id/cb_album_check" android:layout_marginRight="@dimen/album_dp_10" android:text="@string/album_check" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/album_CheckBox.WrapContent"/>
+        </RelativeLayout>
+        <FrameLayout android:id="@+id/layout_layer" android:background="@color/album_ItemLayer" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+            <TextView android:textSize="@dimen/album_sp_16" android:textColor="@color/album_White" android:layout_gravity="center" android:text="@string/album_item_unavailable" style="@style/album_WrapContent"/>
+        </FrameLayout>
+    </FrameLayout>
+</RelativeLayout>

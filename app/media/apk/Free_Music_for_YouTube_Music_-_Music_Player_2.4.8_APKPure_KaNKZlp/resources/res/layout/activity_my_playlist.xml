@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="#f7f7f7" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_top" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:id="@+id/rel_toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp">
+        <ImageView android:id="@+id/img_back" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/my_playlist" android:layout_toRightOf="@+id/img_back" android:layout_centerVertical="true" app:typeface="monospace"/>
+        <ImageView android:id="@+id/img_add_playlist" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="14dp" android:src="@mipmap/icon_white_add_playlist" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <ListView android:id="@+id/my_playlist_listView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/player_bar_height" android:divider="@color/color_d9cfd1" android:dividerHeight="0.5dp" android:layout_below="@+id/img_top"/>
+    <include layout="@layout/view_player_bar"/>
+</RelativeLayout>

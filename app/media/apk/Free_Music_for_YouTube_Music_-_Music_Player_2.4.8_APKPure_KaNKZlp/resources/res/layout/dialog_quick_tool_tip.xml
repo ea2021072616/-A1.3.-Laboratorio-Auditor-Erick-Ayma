@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_white_radius_3dp" android:layout_width="310dp" android:layout_height="wrap_content">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/color_343434" android:gravity="center_horizontal" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/switch_quick_tools_guide" app:typeface="normal"/>
+        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="16dp" android:layout_marginRight="16dp" android:src="@mipmap/pic_toolbar_tip_img" android:scaleType="centerCrop"/>
+        <RelativeLayout android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="98dp" android:layout_marginTop="5.5dp">
+            <ImageView android:background="@mipmap/permit_btn_shadow" android:layout_width="match_parent" android:layout_height="71dp" android:layout_marginTop="15dp"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/enable" android:background="@drawable/bg_join_us_red" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="15dp" android:text="@string/enable" app:typeface="monospace"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/cancel_textcolor_press" android:gravity="center" android:id="@+id/cancel" android:layout_width="match_parent" android:layout_height="38dp" android:text="@string/cancel" android:layout_weight="1" android:layout_alignParentBottom="true" app:typeface="monospace"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

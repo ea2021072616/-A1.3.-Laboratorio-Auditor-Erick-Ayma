@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@+id/play_list_lv" android:background="@drawable/shape_white_corner" android:layout_width="310dp" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:layout_marginBottom="50dp">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/add_to_my_playlist"/>
+        <ListView android:id="@+id/dialog_play_list" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:divider="@color/transparent" android:dividerHeight="12dp"/>
+    </LinearLayout>
+</merge>

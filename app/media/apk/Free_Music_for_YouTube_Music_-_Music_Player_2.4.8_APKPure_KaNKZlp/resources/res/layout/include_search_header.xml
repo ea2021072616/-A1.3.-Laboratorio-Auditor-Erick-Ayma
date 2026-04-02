@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:zhy="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="50dp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/search_artists_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/icon_artist" android:scaleType="centerCrop" android:adjustViewBounds="true" android:tint="@color/color_beb7b7"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_9b9b9b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/artists"/>
+            <ImageView android:layout_width="24dp" android:layout_height="wrap_content" android:src="@mipmap/chevron_right" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/search_genres_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/icon_search_charts" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_9b9b9b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/rank"/>
+            <ImageView android:layout_width="24dp" android:layout_height="wrap_content" android:src="@mipmap/chevron_right" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_9b9b9b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="15dp" android:text="@string/hot_searches" zhy:typeface="normal"/>
+    <com.zhy.view.flowlayout.TagFlowLayout android:id="@+id/search_header_flow_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.5dp" android:layout_marginRight="12.5dp" zhy:max_select="1"/>
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_9b9b9b" android:id="@+id/search_header_history_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="20dp" android:text="@string/history" zhy:typeface="normal"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/ll_hit" android:background="#fff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.fotoable.youtube.music.ui.view.CustomImageView android:id="@+id/cover_iv" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/icon_bigplaylistdefault" android:scaleType="centerCrop" app:riv_leftTopRadius="3dp" app:riv_rightTopRadius="3dp" app:riv_rightBottomRadius="3dp" app:riv_leftBottomRadius="3dp"/>
+        <com.fotoable.youtube.music.ui.view.CustomImageView android:background="@drawable/featured_bg1" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop"/>
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_view_count" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="20dp">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="11dp" android:layout_height="11dp" android:layout_marginLeft="5dp" android:src="@mipmap/voice_view_count" android:scaleType="centerCrop"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="10sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@+id/text_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="12M" app:typeface="normal"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/tc_top_music_title" android:ellipsize="end" android:layout_gravity="center" android:id="@+id/text_title" android:paddingTop="8dp" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Let&apos;s enjoy the autumn days" android:maxLines="2" android:lines="2" app:typeface="normal"/>
+</LinearLayout>

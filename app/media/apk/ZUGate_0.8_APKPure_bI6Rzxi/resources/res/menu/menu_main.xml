@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/add_image" android:title="@string/add_image"/>
+    <item android:id="@+id/add_tc_image" android:title="@string/add_tc_image"/>
+    <item android:id="@+id/add_encfs" android:title="@string/add_encfs"/>
+    <item android:id="@+id/create_encfs" android:title="@string/create_encfs"/>
+    <item android:id="@+id/benchmark" android:title="@string/benchmark"/>
+    <item android:id="@+id/settings" android:title="@string/settings"/>
+</menu>

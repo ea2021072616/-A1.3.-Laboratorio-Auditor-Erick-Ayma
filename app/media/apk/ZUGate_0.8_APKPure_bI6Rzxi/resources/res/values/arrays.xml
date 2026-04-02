@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="algorithm_list">
+        <item>AES</item>
+        <item>Blowfish</item>
+        <item>Camellia</item>
+    </array>
+    <array name="assume_strong_biometrics_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </array>
+    <array name="block_size_list">
+        <item>512</item>
+        <item>1024</item>
+        <item>2048</item>
+    </array>
+    <array name="crypto_fingerprint_fallback_prefixes">
+    </array>
+    <array name="crypto_fingerprint_fallback_vendors">
+        <item>samsung</item>
+    </array>
+    <array name="delay_showing_prompt_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </array>
+    <array name="filename_encoding_list">
+        <item>Stream</item>
+        <item>Block</item>
+        <item>@string/without_encryption</item>
+    </array>
+    <array name="hide_fingerprint_instantly_prefixes">
+        <item>SM-A50</item>
+        <item>SM-G973</item>
+        <item>SM-G975</item>
+        <item>SM-G977</item>
+        <item>SM-G770</item>
+        <item>SM-N970</item>
+        <item>SM-N971</item>
+        <item>SM-N975</item>
+        <item>SM-N976</item>
+        <item>SM-N770</item>
+        <item>SC-03L</item>
+        <item>SC-04L</item>
+        <item>SC-05L</item>
+        <item>SC-01M</item>
+        <item>SCV41</item>
+        <item>SCV42</item>
+        <item>SCV45</item>
+    </array>
+    <array name="key_size_list">
+        <item>128</item>
+        <item>192</item>
+        <item>256</item>
+    </array>
+    <array name="veracrypt_enctyptions">
+        <item>@string/auto_detect</item>
+        <item>AES</item>
+        <item>Serpent</item>
+        <item>Twofish</item>
+        <item>Camallia</item>
+        <item>Kuznyechik</item>
+        <item>AES(Twofish)</item>
+        <item>AES(Twofish(Serpent))</item>
+        <item>Camallia(Kuznyechik)</item>
+        <item>Camallia(Serpent)</item>
+        <item>Kuznyechik(AES)</item>
+        <item>Kuznyechik(Serpent(Camellia))</item>
+        <item>Kuznyechik(Twofish)</item>
+        <item>Serpent(AES)</item>
+        <item>Serpent(Twofish(AES))</item>
+        <item>Twofish(Serpent)</item>
+    </array>
+    <array name="veracrypt_hash">
+        <item>@string/auto_detect</item>
+        <item>SHA-256</item>
+        <item>SHA-512</item>
+        <item>Whirlpool</item>
+        <item>RIPEMD-160</item>
+    </array>
+</resources>

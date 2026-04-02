@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@mipmap/notification_bg" android:layout_width="match_parent" android:layout_height="64dp">
+    <ImageView android:id="@+id/video_cover" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="8dp" android:src="@mipmap/icon_playlist_default" android:scaleType="centerCrop" android:layout_centerVertical="true"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:layout_toLeftOf="@+id/play_menu_panel" android:layout_toRightOf="@+id/video_cover" android:layout_centerVertical="true">
+        <TextView android:textSize="14sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/video_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/youtube_does_not_allow_to_play_videos_in_background" android:maxLines="2"/>
+        <TextView android:textSize="12sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/video_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.5dp" android:text="00:00" android:maxLines="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/play_menu_panel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@+id/video_play_back" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/notifi_icon_playback"/>
+        <ImageView android:id="@+id/video_play_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@mipmap/notifi_icon_play"/>
+        <ImageView android:id="@+id/video_play_next" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@mipmap/notifi_icon_playnext"/>
+        <ImageView android:id="@+id/video_close" android:paddingLeft="10dp" android:paddingTop="8dp" android:paddingRight="8dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/notifi_icon_close"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="#f7f7f7" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_top" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:id="@+id/tool_bar_panel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp">
+        <ImageView android:id="@+id/img_back" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/recently_watched" android:layout_toRightOf="@+id/img_back" android:layout_centerVertical="true" app:typeface="monospace"/>
+        <ImageView android:id="@+id/iv_menu" android:padding="5dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="11dp" android:src="@mipmap/white_delete" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/img_top">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <android.support.v4.widget.SwipeRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView android:id="@+id/recycle_pop" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </android.support.v4.widget.SwipeRefreshLayout>
+            <RelativeLayout android:id="@+id/rel_no_data" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="50dp" android:layout_centerHorizontal="true">
+                <ImageView android:id="@+id/img_bg" android:background="@mipmap/empty_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" android:layout_centerHorizontal="true"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="#9b9b9b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/no_recently" android:layout_below="@+id/img_bg" android:layout_centerHorizontal="true" app:typeface="normal"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <include layout="@layout/view_player_bar"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/ll_hit" android:background="#fafafa" android:clickable="true" android:layout_width="match_parent" android:layout_height="36dp">
+    <ImageView android:id="@+id/img_icon" android:layout_width="22dp" android:layout_height="22dp" android:layout_marginLeft="16dp" android:scaleType="centerCrop" android:layout_centerVertical="true"/>
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="#2b2525" android:gravity="center" android:layout_gravity="center" android:id="@+id/text_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="Let&apos;s enjoy the autumn days" android:maxLines="1" android:layout_toRightOf="@+id/img_icon" android:layout_centerVertical="true" app:typeface="normal"/>
+</RelativeLayout>

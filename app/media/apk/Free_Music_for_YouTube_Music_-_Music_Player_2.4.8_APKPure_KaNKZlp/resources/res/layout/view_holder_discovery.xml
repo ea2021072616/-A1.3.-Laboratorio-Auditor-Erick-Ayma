@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@android:color/white" android:layout_width="114dp" android:layout_height="114dp">
+    <com.fotoable.youtube.music.ui.view.RoundImageView android:id="@+id/img_logo" android:layout_width="100dp" android:layout_height="100dp" android:scaleType="centerCrop" android:layout_centerInParent="true" app:riv_leftTopRadius="3dp" app:riv_rightTopRadius="3dp" app:riv_rightBottomRadius="3dp" app:riv_leftBottomRadius="3dp"/>
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/txt_title" android:layout_width="100dp" android:layout_height="100dp" android:text="Pop Music" android:layout_centerInParent="true" app:typeface="monospace"/>
+    <com.fotoable.youtube.music.ui.view.RoundImageView android:background="@drawable/shape_corne_bg" android:layout_width="100dp" android:layout_height="100dp" android:scaleType="centerCrop" android:layout_centerInParent="true" app:riv_leftTopRadius="5dp" app:riv_rightTopRadius="5dp" app:riv_rightBottomRadius="5dp" app:riv_leftBottomRadius="5dp"/>
+</RelativeLayout>

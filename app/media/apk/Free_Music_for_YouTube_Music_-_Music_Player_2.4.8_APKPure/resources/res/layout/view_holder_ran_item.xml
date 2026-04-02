@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/ll_hit" android:layout_width="match_parent" android:layout_height="198dp">
+    <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="156dp">
+        <com.fotoable.youtube.music.ui.view.RoundImageView android:id="@+id/cover_iv" android:background="@mipmap/icon_bigplaylistdefault" android:layout_width="156dp" android:layout_height="156dp" android:scaleType="centerCrop" app:riv_leftTopRadius="3dp" app:riv_rightTopRadius="3dp" app:riv_rightBottomRadius="3dp" app:riv_leftBottomRadius="3dp"/>
+    </RelativeLayout>
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/tc_top_music_title" android:layout_gravity="center" android:id="@+id/text_title" android:layout_width="156dp" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Let&apos;s enjoy the autumn days" app:typeface="normal"/>
+</LinearLayout>

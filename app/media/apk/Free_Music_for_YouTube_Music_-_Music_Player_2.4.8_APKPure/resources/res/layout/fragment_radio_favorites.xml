@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView android:id="@+id/recycle_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <include layout="@layout/include_no_data"/>
+            <RelativeLayout android:id="@+id/show_online_data_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="300dp">
+                <LinearLayout android:gravity="center" android:background="@drawable/no_data_selector" android:layout_width="210dp" android:layout_height="40dp" android:layout_centerHorizontal="true">
+                    <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@mipmap/icon_home_radio" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_ff2d55" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="@string/view_online_radios"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

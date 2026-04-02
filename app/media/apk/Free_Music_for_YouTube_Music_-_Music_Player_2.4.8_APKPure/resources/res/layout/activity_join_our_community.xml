@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <RelativeLayout android:id="@+id/top_panel" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="100dp">
+                    <ImageView android:background="@mipmap/pic_facebook_group" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/title_panel" android:paddingBottom="36dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_facebook_group"/>
+                        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/facebook_group" app:typeface="monospace"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/color_4a4a4a" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="28dp" android:layout_marginTop="37dp" android:layout_marginRight="28dp" android:text="@string/here_is_the_official_facebook_group_where_you_can" app:typeface="normal"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="28dp" android:layout_marginTop="24dp" android:layout_marginRight="28dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_facebook_group_1"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/color_272727" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="@string/feedback_your_problems" app:typeface="monospace"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="28dp" android:layout_marginTop="20dp" android:layout_marginRight="28dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_facebook_group_2"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/color_272727" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="@string/discuss_the_use_of_app_and_exchange_your_favorite_musics_with_others" app:typeface="monospace"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="28dp" android:layout_marginTop="20dp" android:layout_marginRight="28dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_facebook_group_3"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/color_272727" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="@string/we_will_share_lot_of_high_quality_music_for_you" app:typeface="monospace"/>
+                </LinearLayout>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/color_4a4a4a" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="28dp" android:layout_marginTop="24dp" android:layout_marginRight="28dp" android:text="@string/enjoy_it" app:typeface="normal"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="122dp">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/bt_join_us" android:background="@drawable/ad_action_btn_red" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/join_us" app:typeface="monospace"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <include layout="@layout/view_player_bar"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/back_view" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11dp" android:layout_marginTop="32dp" android:src="@mipmap/icon_back"/>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:background="@drawable/subscription_header_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="fitStart"/>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="28sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/get_premium" app:typeface="7"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/enjoy_music_unlimitedly" app:typeface="normal"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/iv_close" android:paddingLeft="14dp" android:paddingTop="16dp" android:paddingRight="14dp" android:paddingBottom="16dp" android:layout_width="57dp" android:layout_height="61dp" android:src="@mipmap/video_close" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="55dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginTop="16dp">
+                <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/subscrip_item1"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/no_ads_just_music" app:typeface="monospace"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="55dp" android:paddingRight="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="80dp">
+                <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/subscrip_item2"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/verified_accounts_for_vip" app:typeface="monospace"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="55dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="80dp">
+                <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/subscrip_item3"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/unlock_music_recognion_feature" app:typeface="monospace"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp">
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="20sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_subscription_submit" android:background="@drawable/btn_subscription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/start_free_trial" android:layout_centerInParent="true" app:typeface="monospace"/>
+            </RelativeLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/color_676767" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/tv_about_subscription" android:paddingLeft="10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32dp" android:layout_marginTop="0dp" android:layout_marginRight="32dp" android:text="@string/about_subscription" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

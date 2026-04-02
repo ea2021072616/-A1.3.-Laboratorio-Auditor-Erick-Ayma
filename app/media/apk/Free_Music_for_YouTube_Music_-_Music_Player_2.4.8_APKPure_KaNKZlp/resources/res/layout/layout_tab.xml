@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:gravity="center" android:id="@+id/tv_tab_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerInParent="true" app:typeface="normal"/>
+    <com.flyco.tablayout.widget.MsgView android:textSize="11.5sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/rtv_msg_tip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:mv_backgroundColor="#fd481f" app:mv_strokeWidth="1dp" app:mv_strokeColor="#ffffff" app:mv_isRadiusHalfHeight="true"/>
+</RelativeLayout>

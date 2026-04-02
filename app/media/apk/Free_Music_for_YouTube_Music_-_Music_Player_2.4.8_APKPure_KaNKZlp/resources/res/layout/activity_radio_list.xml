@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp">
+        <ImageView android:id="@+id/img_back" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@+id/title_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/hot_radios" android:layout_toRightOf="@+id/img_back" android:layout_centerVertical="true" app:typeface="monospace"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/country_select_view" android:background="@drawable/shape_white_stroke_transparent" android:paddingLeft="10dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="25dp" android:layout_margin="16dp" android:layout_alignParentRight="true">
+            <ImageView android:id="@+id/country_img" android:layout_width="18dp" android:layout_height="12dp" android:src="@mipmap/icon_country_default" android:scaleType="centerInside" android:adjustViewBounds="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/country_name_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text=""/>
+            <ImageView android:layout_width="25dp" android:layout_height="wrap_content" android:src="@mipmap/icon_arrow_white" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="80dp">
+        <com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <com.aspsine.irecyclerview.IRecyclerView android:id="@+id/recycle_view" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" app:loadMoreFooterLayout="@layout/load_more_footer" app:refreshEnabled="false" app:loadMoreEnabled="true"/>
+        </com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout>
+        <include layout="@layout/view_player_bar"/>
+    </LinearLayout>
+</RelativeLayout>

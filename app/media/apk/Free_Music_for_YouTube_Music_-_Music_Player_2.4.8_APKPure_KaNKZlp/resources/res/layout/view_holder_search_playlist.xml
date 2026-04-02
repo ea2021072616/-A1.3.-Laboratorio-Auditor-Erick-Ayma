@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="86dp">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <ImageView android:id="@+id/adapter_search_playlist_cover_img" android:layout_width="60dp" android:layout_height="60dp" android:layout_marginLeft="16dp" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="30dp">
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:ellipsize="end" android:id="@+id/adapter_search_playlist_name_tx" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:maxLines="2"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

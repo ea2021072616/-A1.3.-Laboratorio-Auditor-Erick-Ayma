@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_f7f7f7" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_radio" android:background="@drawable/click_status" android:layout_width="match_parent" android:layout_height="57dp">
+                    <ImageView android:layout_width="28dp" android:layout_height="28dp" android:layout_marginLeft="14dp" android:src="@drawable/icon_myradio"/>
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp">
+                        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/top_50_title" android:id="@+id/tv_radio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_radio" android:layout_centerVertical="true" app:typeface="normal"/>
+                        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_b6afb0" android:id="@+id/radio_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/tv_radio" android:layout_centerVertical="true" app:typeface="normal"/>
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="9dp" android:src="@mipmap/chevron_right" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_recently" android:background="@drawable/click_status" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="14dp">
+                    <ImageView android:layout_width="28dp" android:layout_height="28dp" android:layout_marginLeft="14dp" android:src="@drawable/icon_recentlyplayed"/>
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp">
+                        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/top_50_title" android:id="@+id/tv_recently" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recently_watched" android:layout_centerVertical="true" app:typeface="normal"/>
+                        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_b6afb0" android:id="@+id/recently_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/tv_recently" android:layout_centerVertical="true" app:typeface="normal"/>
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="9dp" android:src="@mipmap/chevron_right" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <com.andexert.expandablelayout.library.ExpandableLayout android:id="@+id/expand_created" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="14dp" app:headerLayout="@layout/my_music_created_header" app:contentLayout="@layout/my_music_created_item"/>
+                <com.andexert.expandablelayout.library.ExpandableLayout android:id="@+id/expand_collected" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="14dp" app:headerLayout="@layout/my_music_collected_header" app:contentLayout="@layout/my_music_created_item"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

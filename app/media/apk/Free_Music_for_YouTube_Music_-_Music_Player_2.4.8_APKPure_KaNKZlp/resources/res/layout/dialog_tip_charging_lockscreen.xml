@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="320dp" android:layout_height="wrap_content">
+    <RelativeLayout android:background="@color/white" android:layout_width="320dp" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/img_charging_lockscreen_bigicon" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/charing_tips" android:scaleType="center"/>
+        <ImageView android:id="@+id/iv_charging_lockscreen_activity_back" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2dp" android:src="@mipmap/icon_ad_close" android:tint="@color/white" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:alpha="0.5"/>
+        <RelativeLayout android:id="@+id/rl_charging_lockscreen_activity_set" android:background="#ffffff" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?android:attr/listPreferredItemHeight" android:layout_below="@+id/img_charging_lockscreen_bigicon">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_centerVertical="true">
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/app_lock_txt_color" android:id="@+id/tv_charging_setting_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:text="@string/charging_protect" app:typeface="monospace"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="13sp" android:textColor="#757575" android:id="@+id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="3dp" android:layout_marginRight="20dp" android:text="@string/charging_protect_dis" android:layout_below="@+id/tv_charging_setting_name"/>
+                <Button android:textSize="16sp" android:textColor="@color/white" android:id="@+id/bt_open_charge_lockscreen" android:background="@drawable/bg_join_us_red" android:clickable="false" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:text="@string/enable" android:layout_below="@+id/tv_content" android:textAllCaps="false"/>
+                <TextView android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="20dp" android:layout_marginLeft="20dp" android:layout_marginTop="5dp" android:layout_marginRight="20dp" android:text="@string/contains_ads" android:layout_below="@+id/bt_open_charge_lockscreen" android:layout_alignParentRight="true" android:alpha="0.6"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

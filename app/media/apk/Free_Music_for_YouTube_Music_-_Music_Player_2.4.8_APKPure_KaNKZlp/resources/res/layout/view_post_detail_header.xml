@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include layout="@layout/view_holder_community_post"/>
+    <RelativeLayout android:id="@+id/comment_list_title" android:background="#fafafa" android:visibility="gone" android:layout_width="match_parent" android:layout_height="36dp">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="#ff676767" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="6dp" android:layout_marginBottom="6dp" android:text="@string/comments" android:maxLines="1" android:layout_weight="1" android:layout_alignParentBottom="true" app:typeface="normal"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="0dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_4a4a4a" android:gravity="bottom" android:id="@+id/type_hot" android:paddingLeft="8dp" android:paddingRight="8dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="36dp" android:text="@string/hot" app:typeface="normal"/>
+            <View android:layout_gravity="bottom" android:background="@color/color_c8c7cc" android:layout_width="1dp" android:layout_height="15dp" android:layout_marginBottom="6dp"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_c8c7cc" android:gravity="bottom" android:id="@+id/type_new" android:paddingLeft="8dp" android:paddingRight="16dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="36dp" android:text="@string/new1" app:typeface="normal"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="#ff676767" android:gravity="center" android:id="@+id/no_data_view" android:background="#fafafa" android:paddingLeft="16dp" android:paddingTop="54dp" android:paddingRight="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/no_one_commented_yet_write_your_comment_now" android:layout_centerInParent="true" app:typeface="normal"/>
+</LinearLayout>

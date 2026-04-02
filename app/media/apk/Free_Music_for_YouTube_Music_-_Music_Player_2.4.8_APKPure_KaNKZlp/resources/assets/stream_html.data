@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="height=device-height, initial-scale=1, user-scalable=no">
+    <style>
+        body {
+            margin : 0;
+            padding : 0;
+            text-align: center;
+            background: black;
+            height: 100%;
+            position: relative;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        iframe {
+            border : 0px;
+            frameborder : 0px;
+        }
+
+        #ytPlayerDiv {
+            border:0px;
+            margin:0px auto;
+            padding:0;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+<div id="ytPlayerDiv"></div>
+
+<script>
+          // 2. This code loads the IFrame Player API code asynchronously.
+          var tag = document.createElement('script');
+
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+          // 3. This function creates an <iframe> (and YouTube player)
+          //    after the API code downloads.
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('ytPlayerDiv', {
+              width: window.innerWidth,
+              height: window.innerHeight,
+              playerVars : {
+                'enablejsapi' : 1,
+                'controls' : 0,
+                'showinfo' : 0,
+                'autoplay' : 0,
+                'rel' : 0,
+                'iv_load_policy' : 3
+              },
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange,
+                'onError': onPlayerError,
+                'onPlaybackQualityChange': onPlayerQualityChange
+              }
+            });
+          }
+
+          var refreshCurrentTimeIntervalId;
+          var videoQuality = "small"
+          var curVideoId = null;
+
+          var resizeTrickTimeout;
+          var shouldResizeTrick;
+
+          function onPlayerError(event) {
+              console.log("onPlayerError");
+              console.log(event.data);
+              PlayerJavaInterface.onPlayerError(event.data);
+          }
+
+          function onPlayerReady(event) {
+            console.log("player ready ! ");
+            event.target.setPlaybackQuality(videoQuality);
+            PlayerJavaInterface.onPlayerReady();
+            updatePlayerSize();
+          }
+
+          function onPlayerStateChange(event) {
+            PlayerJavaInterface.onPlayerStateChanged(event.data);
+
+                switch (event.data) {
+                    case YT.PlayerState.UNSTARTED:
+                        console.log("UNSTARTED:"+event.data);
+                        break;
+                    case YT.PlayerState.ENDED:
+                        console.log("ENDED:"+event.data);
+                        break;
+                     case YT.PlayerState.PLAYING:
+                        console.log("PLAYING:"+event.data);
+                        //var a = document.getElementsByClassName("ytp-title-link yt-uix-sessionlink");
+                        //var aa= document.getElementsByTagName("html")
+                        //console.log("qxs Title:"+aa[0].innerHTML);
+                        break;
+                    case YT.PlayerState.PAUSED:
+                        console.log("PAUSED:"+event.data);
+                        break;
+                     case YT.PlayerState.BUFFERING:
+                        console.log("BUFFERING:"+event.data);
+                        break;
+                    case YT.PlayerState.CUED:
+                        console.log("CUED:"+event.data);
+                    break;
+                }
+
+            clearInterval(refreshCurrentTimeIntervalId);
+            if (event.data === 1) {
+                PlayerJavaInterface.onVideoTotalTime(Math.round(player.getDuration()));
+                refreshCurrentTimeIntervalId = setInterval(refreshCurrentTime, 1000);
+
+                if (shouldResizeTrick) {
+                    shouldResizeTrick = false;
+                    resizeTrick();
+                }
+            }
+          }
+
+          function stopVideo() {
+            console.log("stopVideo");
+            player.stopVideo();
+            clearInterval(refreshCurrentTimeIntervalId);
+          }
+
+          function pauseVideo() {
+            console.log("pauseVideo");
+            player.pauseVideo();
+          }
+
+          function playVideo() {
+            console.log("playVideo");
+            player.playVideo();
+          }
+
+           function onSeekTo(startSeconds){
+                player.seekTo(startSeconds, true)
+           }
+
+          // For legacy purpose only.
+          // Deprecated since 1.4.0
+          // Please use loadVideoAtTime instead.
+          function loadVideo(videoId) {
+            shouldResizeTrick = PlayerJavaInterface.isPreKitKat();
+
+            curVideoId = videoId;
+            player.loadVideoById(videoId, 0, videoQuality);
+          }
+
+          function loadVideoAtTime(videoId, time) {
+            shouldResizeTrick = PlayerJavaInterface.isPreKitKat();
+
+            curVideoId = videoId;
+            player.loadVideoById(videoId, time, videoQuality);
+          }
+
+          // Quality
+          function onPlayerQualityChange(event) {
+            console.log("OnPlayerQualityChange - quality " + event.data)
+            videoQuality = event.data
+          }
+
+          function setQuality(width, ishq) {
+            console.log("setQuality with width = " + width + " ishq = " + ishq)
+            if(ishq) {
+              if(width > 1280) {
+              videoQuality = "hd1080";
+              console.log("hd1080");
+              }else if (width > 853){
+               videoQuality = "hd720";
+               console.log("hd720");
+               }else if (width > 640) {
+               videoQuality = "large";
+               console.log("large");
+               }
+              else videoQuality = "medium"
+            } else {
+              videoQuality="small"
+            }
+            console.log("Load new video with quality: " + videoQuality)
+            //We reload the video with the new quality
+            //Check video ID
+            player.loadVideoById(
+              curVideoId,
+              player.getCurrentTime(),
+              videoQuality)
+          }
+
+          function seekTo(time) {
+            player.seekTo(time, true);
+          }
+
+          function refreshCurrentTime() {
+            PlayerJavaInterface.onCurrentTimeChanged(Math.round(player.getCurrentTime()), Math.round(player.getDuration()));
+          }
+
+          var updatePlayerSize = function() {
+             player.setSize(window.innerWidth, window.innerHeight);
+          }
+
+          var releasePlayer = function() {
+             player.stopVideo();
+             player.destroy();
+          }
+
+          var updatePlayerSizeTrick = function() {
+             player.setSize(window.innerWidth - 2, window.innerHeight - 2);
+          }
+
+          window.onresize = function(event) {
+             updatePlayerSize();
+          };
+
+
+          //************************
+          //************************
+          // This is an awful trick for "fixing" a bug on pre-kitkat devices.
+          // On devices prior to kitkat, the yt player does not shows the video correctly when
+          // It starts to play a video just after a loading.
+          // So for about 10 seconds we try to set the correct size of the player
+          // So that the video appears correctly.
+          //************************
+          //************************
+          var resizeTrick = function() {
+             clearTimeout(resizeTrickTimeout);
+             resizeTrickTimeout = setTimeout(function() {
+                 updatePlayerSizeTrick();
+                  resizeTrickTimeout = setTimeout(function() {
+                      updatePlayerSize();
+                      resizeTrickTimeout = setTimeout(function() {
+                         updatePlayerSizeTrick();
+                         resizeTrickTimeout = setTimeout(function() {
+                            updatePlayerSize();
+                         }, 2500);
+                      }, 2500);
+                  }, 2500);
+             }, 2500);
+          }
+
+
+</script>
+
+</body>
+</html>

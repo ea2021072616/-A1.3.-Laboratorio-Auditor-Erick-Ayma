@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@+id/appBarLayout" android:background="@mipmap/pic_top" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="115dp">
+        <android.support.v7.widget.Toolbar android:gravity="bottom" android:id="@+id/toolbar" android:background="@color/all_alpha" android:layout_width="match_parent" android:layout_height="60dp" android:translationY="5dp" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:layout_scrollFlags="enterAlways|scroll">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/status_bar_height">
+                <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@+id/text_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/discovery" android:layout_centerVertical="true"/>
+                <ImageView android:id="@+id/search_img" android:padding="8dp" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginRight="8dp" android:src="@mipmap/icon_search" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                <ImageView android:id="@+id/recognition_img" android:padding="8dp" android:visibility="gone" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginRight="56dp" android:src="@mipmap/icon_music_recognize" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                <View android:id="@+id/recognition_tips_view" android:background="@drawable/shape_oval_red" android:visibility="gone" android:layout_width="8dp" android:layout_height="8dp" android:layout_marginTop="18dp" android:layout_marginRight="70dp" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <com.fotoable.youtube.music.ui.view.SimpleViewPagerIndicator android:gravity="bottom" android:layout_gravity="bottom" android:id="@+id/tab_layout" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</android.support.design.widget.CoordinatorLayout>

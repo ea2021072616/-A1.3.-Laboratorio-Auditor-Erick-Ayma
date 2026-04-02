@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_link_24" android:id="@+id/mount_as_truecrypt" android:title="@string/mount_as_truecrypt"/>
+    <item android:icon="@drawable/ic_link_off_24" android:id="@+id/unmount" android:title="@string/unmount"/>
+    <item android:icon="@drawable/ic_format_clear_24" android:id="@+id/remove_password" android:title="@string/remove_password"/>
+    <item android:icon="@drawable/ic_delete_24" android:id="@+id/remove_device" android:title="@string/remove"/>
+    <item android:icon="@drawable/ic_info_24" android:id="@+id/technical_information" android:title="@string/technical_information"/>
+</menu>

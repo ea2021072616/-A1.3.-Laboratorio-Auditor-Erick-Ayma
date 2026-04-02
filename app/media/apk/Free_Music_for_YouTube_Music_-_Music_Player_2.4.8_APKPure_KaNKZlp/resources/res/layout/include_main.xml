@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="26dp">
+        <ImageView android:id="@+id/main_menu_img" android:layout_width="28dp" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:src="@mipmap/icon_menu" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true"/>
+        <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@+id/main_radio_group" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_centerInParent="true">
+            <RadioButton android:id="@+id/rb_my_music" android:paddingLeft="10dp" android:paddingTop="9dp" android:paddingRight="10dp" android:paddingBottom="9dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:checked="true" android:drawableTop="@drawable/main_my_selector" style="@style/vpn_main_tab"/>
+            <RadioButton android:gravity="center" android:id="@+id/rb_home" android:paddingLeft="10dp" android:paddingTop="9dp" android:paddingRight="10dp" android:paddingBottom="9dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:drawableTop="@drawable/main_home_selector" style="@style/vpn_main_tab"/>
+            <RadioButton android:gravity="center" android:id="@+id/rb_community" android:paddingLeft="10dp" android:paddingTop="9dp" android:paddingRight="10dp" android:paddingBottom="9dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:drawableTop="@drawable/main_community_selector" style="@style/vpn_main_tab"/>
+        </RadioGroup>
+        <ImageView android:id="@+id/main_search_img" android:layout_width="28dp" android:layout_height="wrap_content" android:layout_marginRight="14dp" android:src="@mipmap/icon_search" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="80dp" android:layout_weight="1">
+            <android.support.v4.view.ViewPager android:id="@+id/view_pager" android:background="#fff" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </RelativeLayout>
+        <include layout="@layout/view_player_bar"/>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/rl_loading_ad" android:background="#fafafa" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/animationIV" android:padding="5px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="200dp" android:src="@drawable/adloading" android:layout_centerHorizontal="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="20sp" android:textColor="@color/color_676767" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:text="@string/loading" android:layout_below="@+id/animationIV" android:layout_centerHorizontal="true" app:typeface="normal"/>
+    </RelativeLayout>
+</RelativeLayout>

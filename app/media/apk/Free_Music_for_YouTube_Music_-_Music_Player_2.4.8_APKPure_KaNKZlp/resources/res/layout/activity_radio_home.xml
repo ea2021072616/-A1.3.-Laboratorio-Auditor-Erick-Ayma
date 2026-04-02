@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="26dp">
+        <ImageView android:id="@+id/back_view" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/my_radio" android:layout_toRightOf="@+id/back_view" android:layout_centerVertical="true" app:typeface="monospace"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="80dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <com.flyco.tablayout.SlidingTabLayout android:layout_gravity="center_vertical" android:id="@+id/radio_tab_layout" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="44dp" app:tl_indicator_color="@color/color_ff2d55" app:tl_indicator_height="3dp" app:tl_indicator_width="70dp" app:tl_tab_space_equal="true" app:tl_textBold="NONE" app:tl_textSelectColor="@color/color_ff2d55" app:tl_textUnselectColor="@color/color_676767" app:tl_textsize="14sp"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <android.support.v4.view.ViewPager android:id="@+id/radio_view_pager" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <View android:background="@mipmap/ic_shadow" android:layout_width="match_parent" android:layout_height="5dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <include layout="@layout/view_player_bar"/>
+    </LinearLayout>
+</RelativeLayout>

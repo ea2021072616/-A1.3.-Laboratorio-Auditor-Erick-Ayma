@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:background="@drawable/delete_shape_corne_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="15sp" android:textColor="#2b2525" android:gravity="left" android:id="@+id/txt_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="28dp" android:layout_marginRight="18dp" android:text="@string/go_to_browser"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/lin_checkbox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="21.5dp" android:layout_marginRight="18dp" android:layout_below="@+id/txt_title">
+        <CheckBox android:textColor="#2b2525" android:id="@+id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/dont_show_again" style="@style/CustomCheckboxTheme4"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="24.5dp" android:layout_marginRight="18dp" android:layout_marginBottom="25dp" android:layout_below="@+id/lin_checkbox">
+        <TextView android:textSize="15sp" android:textColor="#b6afb0" android:gravity="center" android:id="@+id/txt_cancel" android:background="@drawable/dialog_btn_grey_selector" android:layout_width="128dp" android:layout_height="36dp" android:text="@string/cancel" android:layout_weight="1"/>
+        <View android:background="@color/all_alpha" android:layout_width="18dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView android:textSize="15sp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/txt_ok" android:background="@drawable/dialog_btn_red_selector" android:layout_width="128dp" android:layout_height="36dp" android:text="@string/go" android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>

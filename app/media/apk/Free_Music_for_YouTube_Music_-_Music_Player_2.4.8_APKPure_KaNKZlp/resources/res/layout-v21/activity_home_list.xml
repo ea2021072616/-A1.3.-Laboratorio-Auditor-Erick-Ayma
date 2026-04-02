@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="#f7f7f7" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_top" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop" android:elevation="5dp"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:elevation="5dp">
+        <ImageView android:id="@+id/img_back" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@+id/title_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/hit_singles" android:layout_toRightOf="@+id/img_back" android:layout_centerVertical="true" app:typeface="monospace"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="80dp" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.aspsine.irecyclerview.IRecyclerView android:id="@+id/recycle_view" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" app:loadMoreFooterLayout="@layout/load_more_footer" app:refreshEnabled="false" app:loadMoreEnabled="true"/>
+        </com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout>
+        <include layout="@layout/view_player_bar"/>
+    </LinearLayout>
+</RelativeLayout>

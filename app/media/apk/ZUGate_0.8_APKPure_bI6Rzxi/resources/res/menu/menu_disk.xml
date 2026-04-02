@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_power_on_24" android:id="@+id/connect_by_root" android:visible="false" android:title="@string/connect_by_root"/>
+    <item android:icon="@drawable/ic_power_off_24" android:id="@+id/disconnect" android:title="@string/disconnect"/>
+    <item android:icon="@drawable/ic_delete_24" android:id="@+id/remove_device" android:title="@string/remove"/>
+</menu>

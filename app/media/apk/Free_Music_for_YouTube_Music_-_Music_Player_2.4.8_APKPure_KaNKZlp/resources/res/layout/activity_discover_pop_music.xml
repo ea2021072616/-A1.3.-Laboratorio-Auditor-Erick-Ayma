@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@android:color/white" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@+id/appBarLayout" android:background="@mipmap/pic_top" android:paddingTop="15dp" android:layout_width="match_parent" android:layout_height="80dp">
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:layout_scrollFlags="enterAlways|scroll">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/status_bar_height">
+                <ImageView android:id="@+id/img_back" android:paddingLeft="-10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="46dp" android:layout_height="46dp" android:src="@mipmap/icon_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/pop_music" android:layout_toRightOf="@+id/img_back" android:layout_centerVertical="true" app:typeface="monospace"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <android.support.design.widget.TabLayout android:id="@+id/sliding_tab" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" app:tabIndicatorColor="@android:color/white" app:tabIndicatorHeight="3dp" app:tabTextColor="@android:color/white" app:tabSelectedTextColor="@android:color/white"/>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/appBarLayout"/>
+</RelativeLayout>

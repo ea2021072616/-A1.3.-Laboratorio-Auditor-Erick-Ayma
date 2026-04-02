@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_f7f7f7" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="20dp">
+        <ImageView android:id="@+id/music_recognition_back_view" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/music_recognition" android:layout_toRightOf="@+id/music_recognition_back_view" android:layout_centerVertical="true" app:typeface="monospace"/>
+        <ImageView android:id="@+id/music_recognition_history_img" android:padding="10dp" android:layout_width="52dp" android:layout_height="52dp" android:layout_marginRight="6dp" android:src="@mipmap/icon_recognize_history" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/music_recognition_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="100dp">
+        <com.rodolfonavalon.shaperipplelibrary.ShapeRipple android:id="@+id/music_recognition_ripple_view" android:layout_width="match_parent" android:layout_height="320dp" android:layout_centerInParent="true" app:ripple_color="#ff476b" app:ripple_duration="2000" app:enable_color_transition="true" app:ripple_count="6"/>
+        <ImageView android:id="@+id/music_recognition_bg_img" android:layout_width="200dp" android:layout_height="200dp" android:src="@drawable/music_recognition_bg_selector" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+        <com.airbnb.lottie.LottieAnimationView android:id="@+id/music_recognition_animation_view" android:layout_width="80dp" android:layout_height="80dp" android:layout_centerInParent="true"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="320dp">
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="20sp" android:textColor="@color/color_2b2525" android:id="@+id/music_recognition_state_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recognizing"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_4a4a4a" android:id="@+id/music_recognition_desc_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/tap_to_cancel"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/music_recognition_result_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="100dp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <com.airbnb.lottie.LottieAnimationView android:id="@+id/music_recognition_search_animation_view" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="8dp"/>
+            <ImageView android:id="@+id/music_recognition_no_result_img" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:src="@mipmap/icon_no_resource" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_272727" android:id="@+id/music_recognition_no_result_tx" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="250dp" android:layout_height="250dp" android:layout_marginTop="25dp">
+            <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/music_recognition_cover_img" android:layout_width="250dp" android:layout_height="250dp" android:src="@mipmap/icon_recongize_cover" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerHorizontal="true" app:riv_corner_radius="5dp"/>
+            <ImageView android:id="@+id/music_recognition_share_img" android:padding="8dp" android:visibility="gone" android:layout_width="40dp" android:layout_height="wrap_content" android:src="@mipmap/icon_small_share" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentRight="true"/>
+            <CheckBox android:id="@+id/music_recognition_like_checkbox" android:padding="8dp" android:visibility="gone" android:layout_width="40dp" android:layout_height="40dp" android:drawableTop="@drawable/recognize_like_selector" style="@style/img_lick"/>
+            <ImageView android:id="@+id/music_recognition_play_img" android:visibility="gone" android:layout_width="58dp" android:layout_height="wrap_content" android:src="@mipmap/icon_play" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/music_recognition_result_info_layout" android:background="@drawable/shape_corner_bg" android:padding="14dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/music_recognition_result_title_tx" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:maxLines="1"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/music_recognition_result_author_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text=""/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:layout_width="260dp" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginTop="20dp">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/music_recognition_find_artists_img" android:background="@drawable/shape_recognize_round_selector" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@mipmap/icon_artist"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_4a4a4a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/artists"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                <ImageView android:id="@+id/music_recognition_find_lyric_img" android:background="@drawable/shape_recognize_round_selector" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@mipmap/icon_findlyric"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_4a4a4a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/find_lyric"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                <ImageView android:id="@+id/music_recognition_find_mp3_img" android:background="@drawable/shape_recognize_round_selector" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@mipmap/icon_find_mp3"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_4a4a4a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/search_find_mp3"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/music_recognition_feedback_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_676767" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/not_correct"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_272727" android:id="@+id/music_recognition_feedback_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/give_us_feedback"/>
+    </LinearLayout>
+    <ImageView android:layout_width="135dp" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:src="@mipmap/icon_acrcloud" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    <View android:background="@mipmap/ic_shadow" android:layout_width="match_parent" android:layout_height="5dp" android:layout_marginTop="80dp"/>
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/root_view" android:clickable="true" android:layout_width="match_parent" android:layout_height="329dp">
+    <LinearLayout android:orientation="vertical" android:id="@+id/main_container" android:background="@drawable/bg_quick_tools" android:layout_width="match_parent" android:layout_height="320dp" android:layout_marginLeft="9dp" android:layout_marginRight="9dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="23dp" android:layout_marginTop="24dp" android:layout_marginRight="23dp">
+            <ImageButton android:id="@+id/wifi" android:background="@null" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/btn_setup_wifi" android:scaleType="fitCenter"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/dataFlow" android:background="@null" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/btn_setup_data" android:scaleType="fitCenter"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/phonesound" android:background="@null" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/btn_setup_phonesound" android:scaleType="fitCenter"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/bluetooth" android:background="@null" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/btn_setup_blue" android:scaleType="fitCenter"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/location" android:background="@null" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/btn_setup_location" android:scaleType="fitCenter"/>
+        </LinearLayout>
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/light_screen_panel" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp">
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/rl_light_min" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentLeft="true">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/l_toolbox_icon_light_small" android:scaleType="fitCenter"/>
+            </RelativeLayout>
+            <SeekBar android:id="@+id/mySeekBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxHeight="3dp" android:progressDrawable="@drawable/sb_quick_tool_progress" android:thumb="@drawable/player_settings_bright_thumb" android:thumbOffset="7dp" android:layout_toLeftOf="@+id/rl_light_max" android:layout_toRightOf="@+id/rl_light_min" android:layout_centerInParent="true"/>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/rl_light_max" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentRight="true">
+                <ImageButton android:layout_gravity="center" android:id="@+id/autoluminance" android:background="@null" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="5dp" android:src="@drawable/l_toolbox_icon_light" android:scaleType="fitCenter"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp">
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/view_sound_min" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentLeft="true">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/icon_sound_min" android:scaleType="fitCenter"/>
+            </RelativeLayout>
+            <SeekBar android:id="@+id/mySoundSeekBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxHeight="3dp" android:progressDrawable="@drawable/sb_quick_tool_progress" android:thumb="@drawable/player_settings_bright_thumb" android:thumbOffset="7dp" android:layout_toLeftOf="@+id/view_sound_max" android:layout_toRightOf="@+id/view_sound_min" android:layout_centerInParent="true"/>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/view_sound_max" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentRight="true">
+                <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/icon_sound_max" android:scaleType="fitCenter"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginLeft="23dp" android:layout_marginTop="30dp" android:layout_marginRight="23dp">
+            <ImageButton android:id="@+id/btn_clear_storage" android:background="@drawable/bg_clear_storage_selector" android:layout_width="52dp" android:layout_height="match_parent"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/btn_optimize_battery" android:background="@drawable/bg_optimize_battery_selector" android:layout_width="52dp" android:layout_height="match_parent"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/btn_clear_memory" android:background="@drawable/bg_clear_memory_selector" android:layout_width="52dp" android:layout_height="match_parent"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/btn_optimize_cpu" android:background="@drawable/bg_optimize_cpu_selector" android:layout_width="52dp" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="23dp" android:layout_marginRight="23dp">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="86dp" android:layout_centerVertical="true">
+                <ImageView android:id="@+id/quick_music_cover" android:layout_width="86dp" android:layout_height="86dp" android:src="@mipmap/widget_default_cover" android:scaleType="centerCrop"/>
+                <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="24dp">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toLeftOf="@+id/quick_time" android:layout_above="@+id/quick_time">
+                        <com.fotoable.youtube.music.ui.view.MarqueeTextView android:textSize="13sp" android:textColor="@color/color_222a2c" android:ellipsize="end" android:id="@+id/quick_music_name" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/welcome_to_freemusic_tube_enjoy_your_music" android:singleLine="true" android:layout_weight="1"/>
+                    </LinearLayout>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_cd5c71" android:gravity="bottom" android:id="@+id/quick_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:text="       " android:maxLines="1" android:layout_above="@+id/quick_progress" android:layout_alignParentRight="true"/>
+                    <com.fotoable.youtube.music.ui.view.QuickToolProgressView android:id="@+id/quick_progress" android:layout_width="match_parent" android:layout_height="2.5dp" android:layout_marginBottom="5dp" android:layout_centerVertical="true"/>
+                    <RelativeLayout android:gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                        <ImageView android:id="@+id/quick_play_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bt_change_play_state_quicktool"/>
+                        <ImageView android:id="@+id/quick_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quicktool_btn_search_click_style" android:layout_alignParentRight="true"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/weather_container" android:background="@drawable/bg_tools_round_shape" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="23dp" android:layout_marginTop="25dp" android:layout_marginRight="23dp">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true">
+                <ImageView android:id="@+id/ic_weather" android:layout_width="36dp" android:layout_height="36dp"/>
+                <TextView android:textSize="15sp" android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@+id/tv_weather_desc" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="25dp"/>
+            </LinearLayout>
+            <ImageView android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_quick_tools_next" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/lin_tools" android:background="@drawable/bg_tools_round_shape" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="23dp" android:layout_marginTop="25dp" android:layout_marginRight="23dp" android:layout_marginBottom="24dp">
+            <RelativeLayout android:id="@+id/btn_flashlight" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <ImageView android:id="@+id/icon_flashlight" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/flashlight_selector"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/btn_tools_color_selector" android:gravity="center_vertical" android:id="@+id/text_flashlight" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="25dp" android:text="Flashlight"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/btn_camera" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/camera_selector"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/btn_tools_color_selector" android:gravity="center_vertical" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="25dp" android:text="Camera"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:background="#66ffffff" android:layout_width="0.5dp" android:layout_height="match_parent"/>
+            <RelativeLayout android:id="@+id/btn_calculator" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/calculator_selector"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/btn_tools_color_selector" android:gravity="center_vertical" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="25dp" android:text="Calculator"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

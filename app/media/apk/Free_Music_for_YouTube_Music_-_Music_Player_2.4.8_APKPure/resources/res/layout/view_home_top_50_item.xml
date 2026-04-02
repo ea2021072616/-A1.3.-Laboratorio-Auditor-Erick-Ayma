@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="96dp">
+        <ImageView android:id="@+id/cover_iv" android:background="@color/bg_d8_3" android:layout_width="match_parent" android:layout_height="96dp" android:scaleType="centerCrop"/>
+        <LinearLayout android:orientation="horizontal" android:background="@mipmap/bg_view_count" android:layout_width="wrap_content" android:layout_height="20dp">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="11dp" android:layout_height="11dp" android:layout_marginLeft="5dp" android:src="@mipmap/voice_view_count" android:scaleType="centerCrop"/>
+            <TextView android:textSize="10sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="12M"/>
+        </LinearLayout>
+        <TextView android:textSize="10sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:background="#b9000000" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="15dp" android:text="4:32" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <TextView android:textSize="14sp" android:textColor="@color/tc_top_music_title" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Type something Type something" android:maxLines="2"/>
+</LinearLayout>

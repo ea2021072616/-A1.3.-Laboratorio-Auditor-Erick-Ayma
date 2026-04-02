@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/view_root" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="top" android:layout_gravity="bottom|center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="3.5">
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_ad_background" android:background="#10ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="15dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/iv_close_ad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@mipmap/btn_close_normal" android:layout_centerVertical="true"/>
+                <TextView android:id="@+id/tv_ad_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <View android:background="#f1f1f1" android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginTop="10dp"/>
+            <FrameLayout android:layout_gravity="bottom" android:id="@+id/adview_parent" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

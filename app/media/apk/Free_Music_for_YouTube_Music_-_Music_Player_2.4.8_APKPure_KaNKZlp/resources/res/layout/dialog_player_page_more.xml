@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:paddingTop="14dp" android:paddingBottom="14dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/add_to_playlist" android:background="@drawable/click_status_f5f0f1" android:layout_width="match_parent" android:layout_height="46dp">
+        <ImageView android:layout_gravity="center_vertical" android:background="@mipmap/icon_addtoplaylist" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginLeft="16dp" android:scaleType="centerCrop"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="#4a4a4a" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/add_to_my_playlist" app:typeface="normal"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/video_search_lyric" android:background="@drawable/click_status_f5f0f1" android:layout_width="match_parent" android:layout_height="46dp">
+        <ImageView android:layout_gravity="center_vertical" android:background="@mipmap/icon_findlyric" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginLeft="16dp" android:scaleType="centerCrop"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="#4a4a4a" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/find_lyric" app:typeface="normal"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/video_search_mp3" android:background="@drawable/click_status_f5f0f1" android:layout_width="match_parent" android:layout_height="46dp">
+        <ImageView android:layout_gravity="center_vertical" android:background="@mipmap/icon_find_mp3" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginLeft="16dp" android:scaleType="centerCrop"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="#4a4a4a" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/find_mp3" app:typeface="normal"/>
+    </LinearLayout>
+</LinearLayout>

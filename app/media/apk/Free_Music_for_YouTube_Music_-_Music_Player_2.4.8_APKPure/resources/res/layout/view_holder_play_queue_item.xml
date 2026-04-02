@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="56.5dp">
+    <RelativeLayout android:background="@drawable/click_status" android:layout_width="match_parent" android:layout_height="56dp">
+        <RelativeLayout android:layout_width="44dp" android:layout_height="match_parent">
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/tx_play_queue_item_seq" android:id="@+id/video_seq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:layout_centerInParent="true" app:typeface="normal"/>
+            <ImageView android:id="@+id/video_play_state" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/icon_musicplaying" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="44dp" android:layout_marginRight="50dp" android:layout_centerVertical="true">
+            <com.fotoable.youtube.music.ui.view.MarqueeTextView android:textSize="14sp" android:textColor="@color/top_50_title" android:ellipsize="end" android:id="@+id/video_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Type something ab Video Name" android:maxLines="1" android:singleLine="true" app:typeface="normal"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_676767" android:ellipsize="end" android:id="@+id/video_description" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Other discription" android:maxLines="1" app:typeface="normal"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/video_delete" android:padding="5dp" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="10dp" android:src="@mipmap/icon_delete_history" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <View android:background="@color/color_e8e8e8" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

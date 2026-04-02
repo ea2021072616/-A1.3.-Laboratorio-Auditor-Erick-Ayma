@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:id="@+id/tool_bar_panel" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="26dp">
+        <ImageView android:id="@+id/back_view" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/radio" android:layout_toRightOf="@+id/back_view" android:layout_centerVertical="true" app:typeface="monospace"/>
+        <ImageView android:id="@+id/refresh_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:src="@mipmap/icon_refresh" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <WebView android:id="@+id/webView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/player_bar_height" android:layout_below="@+id/tool_bar_panel"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/loading_view" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/player_bar_height" android:layout_below="@+id/tool_bar_panel">
+        <com.airbnb.lottie.LottieAnimationView android:id="@+id/animation_view" android:layout_width="24dp" android:layout_height="24dp" app:lottie_fileName="Searching.json" app:lottie_autoPlay="true" app:lottie_loop="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/color_2b2525" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/loading"/>
+    </LinearLayout>
+    <include layout="@layout/view_player_bar"/>
+</RelativeLayout>

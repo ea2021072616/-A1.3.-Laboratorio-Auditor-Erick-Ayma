@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="46dp">
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="#000" android:id="@+id/timer_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="Play last song to end." android:layout_centerVertical="true" app:typeface="normal"/>
+    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="#969297" android:id="@+id/timer_real" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:layout_toLeftOf="@+id/timer_selected" android:layout_centerVertical="true" app:typeface="normal"/>
+    <ImageView android:id="@+id/timer_selected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:src="@drawable/timer_selected" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    <View android:id="@+id/line" android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

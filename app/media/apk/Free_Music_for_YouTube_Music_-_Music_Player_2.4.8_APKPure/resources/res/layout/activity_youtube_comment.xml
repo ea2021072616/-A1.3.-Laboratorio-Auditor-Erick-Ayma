@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:id="@+id/tool_bar_panel" android:layout_width="match_parent" android:layout_height="54dp">
+            <ImageView android:visibility="visible" android:layout_width="match_parent" android:layout_height="54dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="54dp">
+                <ImageView android:id="@+id/back_view" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+                <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:id="@+id/tv_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/comments" android:layout_toRightOf="@+id/back_view" android:layout_centerVertical="true" app:typeface="monospace"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <android.support.v4.widget.SwipeRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="48dp" android:layout_below="@+id/tool_bar_panel" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.aspsine.irecyclerview.IRecyclerView android:id="@+id/recycle_view" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent" app:loadMoreFooterLayout="@layout/load_more_footer" app:refreshEnabled="false" app:loadMoreEnabled="true"/>
+            </LinearLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="48dp" android:layout_alignParentBottom="true">
+        <View android:background="#e2e2e2" android:visibility="visible" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/comment_content_et_hint_panel" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="16dp">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/write_comment_hint"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_9b9b9b" android:gravity="center_vertical" android:id="@+id/comment_content_et_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:text="@string/write_comment"/>
+        </LinearLayout>
+        <EditText android:textSize="14sp" android:textColor="@color/color_2b2525" android:gravity="center_vertical" android:id="@+id/comment_content_et" android:background="@color/transparent" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_toLeftOf="@+id/send_comment" android:layout_centerVertical="true"/>
+        <View android:background="#c7bbbe" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="16dp" android:layout_toLeftOf="@+id/send_comment" android:layout_below="@+id/comment_content_et"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:gravity="center" android:id="@+id/send_comment" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxWidth="100dp" android:minWidth="60dp" android:text="@string/send" android:layout_alignParentRight="true" app:typeface="normal"/>
+    </RelativeLayout>
+</RelativeLayout>

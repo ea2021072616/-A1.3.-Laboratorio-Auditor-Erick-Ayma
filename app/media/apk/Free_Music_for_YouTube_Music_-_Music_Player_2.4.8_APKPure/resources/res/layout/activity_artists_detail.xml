@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@+id/app_barLayout" android:layout_width="match_parent" android:layout_height="150dp">
+        <android.support.design.widget.CollapsingToolbarLayout android:id="@+id/CollapsingToolbarLayout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:expandedTitleMarginStart="48dp" app:expandedTitleMarginEnd="64dp">
+            <ImageView android:id="@+id/main_backdrop" android:layout_width="match_parent" android:layout_height="180dp" android:src="@mipmap/loadingbg" android:scaleType="centerCrop" app:layout_collapseMode="parallax"/>
+            <ImageView android:id="@+id/img_mask" android:background="#4d000000" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <RelativeLayout android:layout_gravity="bottom" android:id="@+id/rl_details" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@+id/rel_icon" android:layout_width="60dp" android:layout_height="60dp" android:layout_marginLeft="22dp" android:layout_marginBottom="20dp">
+                    <ImageView android:background="@drawable/shape_circle_img" android:visibility="gone" android:layout_width="60dp" android:layout_height="60dp" android:scaleType="centerCrop" android:layout_centerInParent="true"/>
+                    <com.fotoable.youtube.music.ui.view.RoundImageView android:id="@+id/iv_LoadingPic" android:background="@mipmap/artist_topdefault" android:layout_width="60dp" android:layout_height="60dp" android:scaleType="centerCrop" android:layout_centerInParent="true" app:riv_leftTopRadius="50dp" app:riv_rightTopRadius="50dp" app:riv_rightBottomRadius="50dp" app:riv_leftBottomRadius="50dp"/>
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="14dp" android:layout_marginRight="18dp" android:layout_toRightOf="@+id/rel_icon" android:layout_alignTop="@+id/rel_icon" android:layout_alignBottom="@+id/rel_icon">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/txt_title" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/wearing_network_connect_error" android:maxLines="1" android:shadowColor="#4d000000" android:shadowDx="0" android:shadowDy="5" android:shadowRadius="10" android:layout_weight="1" app:typeface="monospace"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="#ccffffff" android:ellipsize="end" android:gravity="top" android:id="@+id/txt_desc" android:visibility="gone" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/something_error" android:maxLines="1" android:shadowColor="#4d000000" android:shadowDx="0" android:shadowDy="5" android:shadowRadius="10" android:layout_weight="1" app:typeface="normal"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <android.support.v7.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize" android:layout_marginTop="15dp" app:layout_collapseMode="pin">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/status_bar_height">
+                    <ImageView android:id="@+id/img_back" android:paddingLeft="-10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="46dp" android:layout_height="46dp" android:src="@mipmap/icon_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                    <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="20dp" android:text="@string/pop_music" android:maxLines="1" android:layout_toRightOf="@+id/img_back" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.flyco.tablayout.SlidingTabLayout android:layout_gravity="center_vertical" android:id="@+id/search_tab_layout" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="44dp" app:tl_indicator_color="@color/color_ff2d55" app:tl_indicator_height="3dp" app:tl_indicator_width="70dp" app:tl_tab_space_equal="true" app:tl_textBold="NONE" app:tl_textSelectColor="@color/color_ff2d55" app:tl_textUnselectColor="@color/color_676767" app:tl_textsize="14sp"/>
+            <View android:background="@mipmap/ic_shadow" android:layout_width="match_parent" android:layout_height="5dp"/>
+            <android.support.v4.view.ViewPager android:id="@+id/search_view_pager" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <View android:id="@+id/empty_bottom_bar" android:layout_width="match_parent" android:layout_height="56dp"/>
+    </LinearLayout>
+    <include layout="@layout/view_player_bar"/>
+</android.support.design.widget.CoordinatorLayout>

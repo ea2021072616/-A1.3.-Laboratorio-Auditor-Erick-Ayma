@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/pic_top" android:scaleType="centerCrop"/>
+    <RelativeLayout android:id="@+id/tool_bar_panel" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="26dp">
+        <ImageView android:id="@+id/back_view" android:background="?android:attr/selectableItemBackground" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@mipmap/icon_back" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/sleep_timer" android:layout_toRightOf="@+id/back_view" android:layout_centerVertical="true" app:typeface="monospace"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/tool_bar_panel">
+        <ScrollView android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView android:id="@+id/recycle_view" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="46dp" android:layout_marginTop="12dp">
+                    <View android:id="@+id/play_end_panel" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <TextView android:textSize="14sp" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/play_last_end" android:layout_centerVertical="true"/>
+                    <CheckBox android:gravity="center_vertical" android:id="@+id/play_end_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CustomCheckboxTheme5"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+        <include layout="@layout/view_player_bar"/>
+    </LinearLayout>
+</RelativeLayout>

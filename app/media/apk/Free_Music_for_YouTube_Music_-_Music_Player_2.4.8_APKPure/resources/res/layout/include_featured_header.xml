@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/carousel_pager_panel" android:background="@color/color_9b9b8c" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.v4.view.ViewPager android:id="@+id/carousel_pager" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/carousel_point_ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:layout_marginBottom="18dp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/featured_charts_view" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/home_charts_selector" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:gravity="center" android:layout_width="60dp" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/rank"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/featured_artists_view" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/home_artists_selector" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:gravity="center" android:layout_width="60dp" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/artists"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/featured_genres_view" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/home_genres_selector" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:gravity="center" android:layout_width="60dp" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/genres"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/color_f7f7f7" android:visibility="gone" android:layout_width="match_parent" android:layout_height="12dp"/>
+</LinearLayout>

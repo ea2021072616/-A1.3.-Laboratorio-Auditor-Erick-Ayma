@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/rel_root" android:background="@drawable/click_status" android:layout_width="match_parent" android:layout_height="60.5dp">
+    <ImageView android:id="@+id/img_icon" android:layout_width="46dp" android:layout_height="46dp" android:layout_marginLeft="16dp" android:layout_centerVertical="true"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/lin_desc" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="12.5dp" android:layout_marginTop="-2dp" android:layout_toLeftOf="@+id/img_del" android:layout_toRightOf="@+id/img_icon" android:layout_alignTop="@+id/img_icon" android:layout_alignBottom="@+id/img_icon">
+        <TextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/txt_title" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxLines="2" android:lines="2" android:layout_weight="1"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="#676767" android:gravity="center_vertical" android:id="@+id/txt_desc" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxLines="1" android:layout_weight="1" app:typeface="normal"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="#676767" android:gravity="center_vertical" android:id="@+id/txt_update" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxLines="1" android:layout_weight="1" app:typeface="normal"/>
+    </LinearLayout>
+    <View android:id="@+id/view_line" android:background="@color/color_e8e8e8" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="16dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

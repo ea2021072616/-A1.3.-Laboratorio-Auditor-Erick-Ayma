@@ -1,0 +1,6 @@
+package com.bumptech.glide.g.b;
+/* compiled from: SizeReadyCallback.java */
+/* loaded from: classes.dex */
+public interface h {
+    void a(int i, int i2);
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="50dp">
+    <RelativeLayout android:id="@+id/rl_ad_batteryview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp">
+        <RelativeLayout android:id="@+id/rl_noad_batteryview" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_battery_blank" android:visibility="visible" android:layout_width="match_parent" android:layout_height="152dp"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/rl_battery_power_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_battery_blank">
+                <LinearLayout android:layout_gravity="bottom|center_horizontal" android:orientation="horizontal" android:id="@+id/rl_battery" android:layout_width="140dp" android:layout_height="69dp">
+                    <RelativeLayout android:layout_width="132dp" android:layout_height="69dp">
+                        <ImageView android:background="@drawable/icon_batterybody" android:layout_width="132dp" android:layout_height="69dp"/>
+                        <FrameLayout android:id="@+id/batteryProcessView" android:background="#a675e95e" android:layout_width="118dp" android:layout_height="55dp" android:layout_marginLeft="7dp" android:layout_centerVertical="true">
+                            <ImageView android:id="@+id/charging" android:layout_width="wrap_content" android:layout_height="55dp" android:src="@drawable/charging"/>
+                        </FrameLayout>
+                        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="20sp" android:textColor="@color/white" android:id="@+id/lblCurrentPower" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" app:typeface="6"/>
+                            <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%" android:layout_toRightOf="@+id/lblCurrentPower" android:layout_alignBaseline="@+id/lblCurrentPower" app:typeface="6"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_batteryhead"/>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/ll_battery_charge_icons" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_marginTop="62dp" android:layout_below="@+id/rl_battery" android:layout_centerInParent="true">
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/iv_battery_stutas_01" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/speed_charging"/>
+                        <ImageView android:id="@+id/iv_battery_stutas_01_loading" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/charging_progress"/>
+                    </FrameLayout>
+                    <RelativeLayout android:layout_width="60dp" android:layout_height="50dp">
+                        <View android:id="@+id/v_battery_status_line_01" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="1dp" android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/iv_battery_stutas_02" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/continuous_uncharge"/>
+                        <ImageView android:id="@+id/iv_battery_stutas_02_loading" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/charging_progress"/>
+                    </FrameLayout>
+                    <RelativeLayout android:layout_width="60dp" android:layout_height="50dp">
+                        <View android:id="@+id/v_battery_status_line_02" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="1dp" android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/iv_battery_stutas_03" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/trickle_uncharge"/>
+                        <ImageView android:id="@+id/iv_battery_stutas_03_loading" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/charging_progress"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/ll_battery_charge_text_panel" android:layout_width="300dp" android:layout_height="20dp" android:layout_marginTop="12dp" android:layout_below="@+id/ll_battery_charge_icons" android:layout_centerInParent="true">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/fast_charge" android:singleLine="true" android:layout_weight="2" app:typeface="4"/>
+                    <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_throw_battery"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/tv_continuous_dis" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/continuous_charge" android:singleLine="true" android:layout_weight="3" app:typeface="4"/>
+                    <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_throw_battery"/>
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/tv_trickle_dis" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/trickle_maintain" android:singleLine="true" android:layout_weight="2" app:typeface="4"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

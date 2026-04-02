@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:background="@drawable/click_status_f5f0f1" android:layout_width="match_parent" android:layout_height="45dp">
+        <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/country_img" android:layout_width="37.5dp" android:layout_height="25dp" android:layout_marginLeft="16dp" android:src="@mipmap/icon_country_default" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true"/>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="14sp" android:textColor="@color/color_2b2525" android:ellipsize="end" android:id="@+id/country_name_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="65dp" android:layout_marginRight="60dp" android:text="sssssss" android:maxLines="2" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <View android:background="@color/color_e8e8e8" android:layout_width="wrap_content" android:layout_height="0.5dp" android:layout_marginLeft="16dp"/>
+</LinearLayout>

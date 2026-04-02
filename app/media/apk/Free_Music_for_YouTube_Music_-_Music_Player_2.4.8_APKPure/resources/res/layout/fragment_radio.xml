@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/root_view" android:paddingBottom="30dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="12dp">
+                <RelativeLayout android:id="@+id/hot_radio_view_all" android:background="@color/white" android:layout_width="match_parent" android:layout_height="40dp">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:textColor="@color/top_50_title" android:id="@+id/hot_radio_view_all_tx" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hot_radios" android:drawableRight="@drawable/home_chevron" android:drawablePadding="5dp" android:layout_centerVertical="true" app:typeface="monospace"/>
+                    <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <View android:background="@color/white" android:layout_width="match_parent" android:layout_height="8dp"/>
+                <android.support.v7.widget.RecyclerView android:id="@+id/hot_radio_recyclerView" android:background="@color/white" android:paddingLeft="11dp" android:paddingRight="11dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="12dp">
+                    <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/hot_countries" android:layout_centerVertical="true" app:typeface="monospace"/>
+                </RelativeLayout>
+                <View android:background="@color/color_d9cfd1" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <android.support.v7.widget.RecyclerView android:id="@+id/hot_country_recyclerView" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="14dp" android:paddingRight="16dp" android:paddingBottom="14dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <RelativeLayout android:id="@+id/all_radio_view" android:background="@drawable/click_status_f5f0f1" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="12dp">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_radios" app:typeface="monospace"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:src="@drawable/home_chevron" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/album_White" style="@style/album_MatchParent">
+    <android.support.design.widget.AppBarLayout android:id="@+id/app_bar_layout" style="@style/album_WrapContent.WidthMatchParent">
+        <com.yanzhenjie.statusview.StatusView android:id="@+id/status_view" android:background="@color/album_ColorPrimaryDark" style="@style/album_WrapContent.WidthMatchParent"/>
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar" style="@style/album_Toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_below="@+id/app_bar_layout" style="@style/album_MatchParent">
+        <TextView android:textColor="@color/album_FontHint" android:id="@+id/tv_message" style="@style/album_WrapContent"/>
+        <android.support.v7.widget.AppCompatButton android:textColor="@color/album_FontLight" android:gravity="center" android:id="@+id/btn_camera_image" android:layout_marginTop="@dimen/album_dp_15" android:text="@string/album_camera_image_capture" android:drawableLeft="@drawable/album_ic_image_camera_white" android:drawablePadding="@dimen/album_dp_6" android:drawableStart="@drawable/album_ic_image_camera_white" style="@style/album_WrapContent"/>
+        <android.support.v7.widget.AppCompatButton android:textColor="@color/album_FontLight" android:gravity="center" android:id="@+id/btn_camera_video" android:layout_marginTop="@dimen/album_dp_15" android:text="@string/album_camera_video_capture" android:drawableLeft="@drawable/album_ic_video_camera_white" android:drawablePadding="@dimen/album_dp_6" android:drawableStart="@drawable/album_ic_video_camera_white" style="@style/album_WrapContent"/>
+    </LinearLayout>
+</RelativeLayout>

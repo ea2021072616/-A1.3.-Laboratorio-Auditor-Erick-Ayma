@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/radio_cover_img" android:layout_width="75dp" android:layout_height="49.5dp" android:src="@mipmap/icon_radio_default" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+            <View android:background="@drawable/shape_gery_stroke_transparent" android:layout_width="75dp" android:layout_height="49.5dp"/>
+        </RelativeLayout>
+        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="12sp" android:textColor="@color/color_2b2525" android:id="@+id/radio_title_tx" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="" android:maxLines="2" android:minLines="2"/>
+    </LinearLayout>
+</LinearLayout>

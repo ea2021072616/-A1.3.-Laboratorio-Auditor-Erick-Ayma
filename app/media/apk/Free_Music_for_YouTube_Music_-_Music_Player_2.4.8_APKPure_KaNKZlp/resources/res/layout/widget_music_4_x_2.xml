@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/view_widget_root_small" android:layout_width="match_parent" android:layout_height="@dimen/music_widget_height_172">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="horizontal" android:background="@mipmap/widget_bg_small" android:layout_width="match_parent" android:layout_height="127dp">
+        <ImageView android:id="@+id/coverIv" android:layout_width="110dp" android:layout_height="90dp" android:layout_marginLeft="12dp" android:src="@mipmap/widget_default_cover" android:scaleType="centerCrop"/>
+        <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="90dp" android:layout_marginLeft="12dp" android:layout_marginRight="12dp">
+            <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/music_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/welcome_to_freemusic_tube_enjoy_your_music" android:maxLines="2" android:lines="2" android:shadowColor="#ff000000" android:shadowDx="4" android:shadowDy="4" android:shadowRadius="10" android:layout_weight="1" android:layout_toLeftOf="@+id/video_time" android:alpha="0.7"/>
+            <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="bottom" android:id="@+id/video_time" android:paddingLeft="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2dp" android:text="-00:00" android:maxLines="1" android:shadowColor="#ff000000" android:shadowDx="0" android:shadowDy="0" android:shadowRadius="1" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:alpha="0.7" android:translationY="-12dp"/>
+            <ProgressBar android:id="@+id/widget_ProgressBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" style="@style/StyleProgressBarMini"/>
+            <RelativeLayout android:gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <ImageView android:id="@+id/video_play_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bt_change_play_state_quicktool"/>
+                <ImageView android:id="@+id/video_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quicktool_btn_search_click_style" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

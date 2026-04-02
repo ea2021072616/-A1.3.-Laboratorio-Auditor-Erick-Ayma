@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.aspsine.irecyclerview.IRecyclerView android:id="@+id/rv_post_list" android:background="@color/color_f7f7f7" android:layout_width="match_parent" android:layout_height="match_parent" app:loadMoreFooterLayout="@layout/load_more_footer" app:refreshEnabled="false" app:loadMoreEnabled="true"/>
+                <RelativeLayout android:id="@+id/rl_error_page" android:background="@color/color_f7f7f7" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="42dp">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/ll_error" android:background="#fff" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+                        <ImageView android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/failicon"/>
+                        <com.fotoable.youtube.music.ui.view.LaToTextView android:textSize="18sp" android:textColor="@color/something_error" android:gravity="center" android:id="@+id/tv_error" android:clickable="false" android:layout_width="match_parent" android:layout_height="40dp" android:layout_margin="15dp" android:text="@string/something_error" app:typeface="normal"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.fotoable.youtube.music.ui.view.ISwipeRefreshLayout>
+    <ImageView android:id="@+id/iv_post_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="21dp" android:layout_marginBottom="23dp" android:src="@drawable/btn_float_post_add" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
